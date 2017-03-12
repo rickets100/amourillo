@@ -12,14 +12,48 @@ header {
   padding: 8px 28px 4px 28px;
 }
 
-.container {
-  padding: 8px 28px 4px 28px;
-}
-
 p {
   color: white;
 }
 
-footer {
+
+a:link, a:visited {
+    background-color: white;
+    color: darkgreen;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+
+/* CUSTOM STYLES */
+.container {
   padding: 8px 28px 4px 28px;
+}
+
+/* NAVBAR */
+ul {
+  list-style-type: none;
+}
+
+ul a:link {
+
+}
+
+ul a:visited {
+color: black;
+
+}
+/* FOOTER */
+footer a {
+  color: darkgreen;
+  height: 18px;
+  width: auto;
+}
+
+footer p {
+  color: darkgreen;
 }
