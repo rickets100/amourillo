@@ -1,9 +1,25 @@
 
-
+* {
+  box-sizing: border-box;
+}
 body {
   background-image: url("../images/hops-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
  }
+
+header {
+  padding: 8px 28px 4px 28px;
+}
+
+.container {
+  padding: 8px 28px 4px 28px;
+}
 
 p {
   color: white;
+}
+
+footer {
+  padding: 8px 28px 4px 28px;
 }
