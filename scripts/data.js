@@ -24,7 +24,7 @@ breweryState: 'OR',
 beerDescription: 'American Pale Ale brewed with 100 Amarillo hops.',
 breweryCountry: 'USA',
 otherHops: 'None'
-}
+},
 
 {
 brewer: 'Three Floyds',
@@ -37,7 +37,7 @@ breweryState: 'IN',
 breweryCountry: 'USA',
 beerDescription: 'Irish Style Red Ale which features Amarillo hops for flavoring.',
 otherHops:
-}
+},
 
 {
 brewer: 'Green Flash',
@@ -50,7 +50,7 @@ breweryState: 'CA',
 breweryCountry: 'USA',
 beerDescription: 'Ruby colored IPA which uses Amarillo for flavoring and is dry-hopped with Amarillo. Nice  example of the aroma character that Amarillo hops produce.',
 otherHops:
-}
+},
 
 {
 brewer: 'Lagunitas',
@@ -63,7 +63,7 @@ breweryState: 'CA',
 breweryCountry: 'USA',
 beerDescription: 'Imperial Red Ale which features Amarillo hops for flavoring and aroma.',
 otherHops:
-}
+},
 
 {
 brewer: 'Founders',
@@ -76,7 +76,7 @@ breweryState: 'MI',
 breweryCountry: 'USA',
 beerDescription: 'Rye IPA dry-hopped with Amarillo hops, creating a flavorful combination.',
 otherHops:
-}
+},
 
 {
 brewer: 'Saint Arnold',
@@ -89,7 +89,7 @@ breweryCity: 'Houston',
 breweryState: 'TX',
 breweryCountry: 'USA',
 otherHops:
-}
+},
 
 {
 brewer: 'Breakside Brewery',
@@ -102,7 +102,7 @@ breweryCity: 'Portland',
 breweryState: 'OR',
 breweryCountry: 'USA',
 otherHops:
-}
+},
 
 {
 brewer: 'BrewDog',
@@ -115,7 +115,7 @@ breweryCity:,
 breweryState:,
 breweryCountry: 'Scotland',
 otherHops:
-}
+},
 
 {
 brewer: 'Hopworks',
@@ -128,7 +128,7 @@ breweryCity: 'Portland',
 breweryState: 'OR',
 breweryCountry: 'USA',
 otherHops: 'None'
-}
+},
 
 {
 brewer: 'Dogfish Head',
@@ -141,7 +141,7 @@ breweryCity: 'Milton',
 breweryState: 'DE',
 breweryCountry: 'USA',
 otherHops:
-}
+},
 
 {
 brewer: 'Kern River',
@@ -154,7 +154,7 @@ breweryCity: 'Kernville',
 breweryState: 'CA',
 breweryCountry: 'USA',
 otherHops: 'Simcoe'
-}
+},
 
 {
 brewer: 'Alpine',
@@ -167,7 +167,7 @@ breweryCity: 'Alpine',
 breweryState: 'CA',
 breweryCountry: 'USA',
 otherHops: 'Simcoe'
-}
+},
 
 {
 brewer: 'Hangar 24',
@@ -180,7 +180,7 @@ breweryCity: 'Redlands',
 breweryState: 'CA',
 breweryCountry: 'USA',
 otherHops:
-}
+},
 
 {
 brewer: 'Ale',
@@ -193,7 +193,7 @@ breweryCity: 'Madison',
 breweryState: 'WI',
 breweryCountry: 'USA',
 otherHops:
-}
+},
 
 {
 brewer: 'Brash',
@@ -206,7 +206,7 @@ breweryCity: 'Ipswich',
 breweryState: 'MA',
 breweryCountry: 'USA',
 otherHops:
-}
+},
 
 {
 brewer: 'Revolution',
@@ -219,7 +219,7 @@ breweryCity: 'Chicago',
 breweryState: 'IL',
 breweryCountry: 'USA',
 otherHops: 'Chinook'
-}
+},
 
 {
 brewer: 'Ninkasi',
@@ -232,7 +232,7 @@ breweryCity: 'Eugene',
 breweryState: 'OR',
 breweryCountry: 'USA',
 otherHops:
-}
+},
 
 {
 brewer: 'Heretic',
@@ -246,7 +246,7 @@ breweryCity: 'Fairfield',
 breweryState: 'CA',
 breweryCountry: 'USA',
 otherHops: 'Sorachi'
-}
+},
 
 {
 brewer: 'Rogue',
@@ -258,8 +258,8 @@ beerDescription: 'American Pale Ale flavored with juniper berries', Amarillo hop
 breweryCity: 'Newport',
 breweryState: 'OR',
 breweryCountry: 'USA',
-otherHops:
-}
+otherHops: 'Styrian Golding'
+},
 
 {
 brewer: 'Ithaca',
@@ -272,7 +272,7 @@ breweryCity: 'Ithaca',
 breweryState: 'NY',
 breweryCountry: 'USA',
 otherHops: 'Cascade',
-}
+},
 
 {
 brewer: 'Fremont',
@@ -285,7 +285,7 @@ breweryCity: 'Seattle',
 breweryState: 'WA',
 breweryCountry: 'USA',
 otherHops: 'None'
-}
+},
 
 {
 brewer: 'Terrapin',
@@ -297,21 +297,21 @@ breweryCity: 'Athens',
 breweryState: 'GA',
 breweryCountry: 'USA',
 beerDescription: 'American Rye Ale dry-hopped with Amarillo hops. Aroma blend of orange citrus and rye malt.',
-otherHops:
-}
+otherHops: ''
+},
 
 {
-brewer: 'Excel',
+brewer: 'Excel Brewing Company',
 beerName: 'Flash Bang',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
-breweryCity: '',
-breweryState: '',
-breweryCountry: '',
+breweryCity: 'Breese',
+breweryState: 'IL',
+breweryCountry: 'USA',
 beerDescription: '',
-otherHops:
-}
+otherHops: 'None'
+},
 
 
 {
@@ -324,7 +324,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops:
+otherHops: ''
 }
 
 
