@@ -1,9 +1,17 @@
 /* API Key: ' 432671cad45a2c4cd0b97ddf1fe4adb0
  http://api.brewerydb.com/v2/?apikey=432671cad45a2c4cd0b97ddf1fe4adb0/brewery/KR4X6i
 
- http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=juniper%20Pale%20Ale
+EXAMPLE OF COMMAND-LINE SYNTAX FOR A SINGLE BEER BY NAME
+http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=juniper%20Pale%20Ale
 
- http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=hopzilla
+EXAMPLE OF AJAX SYNTAX FOR A SINGLE BEER BY NAME
+'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=amarillo%20Pale%20Ale'
+
+EXAMPLE OF COMMAND-LINE SYNTAX FOR A SINGLE BREWERY BY NAME
+http://api.brewerydb.com/v2/breweries\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=brewdog
+
+EXAMPLE OF AJAX SYNTAX FOR A SINGLE BREWERY BY NAME
+http http://api.brewerydb.com/v2/breweries\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=brewdog
 */
 
 /*
@@ -23,24 +31,48 @@ syntax for the get
 jQuery.get( url [, data ] [, success ] [, dataType ] )
 $.get
 */
-console.log('ugh');
+
 // PULL DATA FROM THE DATA FILE
 function createObjectForGets() {
   var objectForGets = {};
   var beerNameArray = [];
   var brewerNameArray = [];
+  var beerNameQuery = ''
   for (let i = 0; i <beerInfo.length; i++) {
     objectForGets.beerName = beerInfo[i].beerName;
-    beerNameArray[i] = beerInfo[i].beerName;
-    objectForGets.brewer = beerInfo[i].brewer;
-    brewerNameArray[i] = beerInfo[i].brewer;
-    console.log('objectForGets', objectForGets);
+    beerNameArray[i] = escape(beerInfo[i].beerName);
+    // objectForGets.brewer = beerInfo[i].brewer;
+    // brewerNameArray[i] = beerInfo[i].brewer;
+    // console.log('objectForGets', objectForGets);
   };
-};
+  //FORMULATE THE STRINGS FOR THE AJAX QUERIES
+  for (i = 0; i < 3; i++) {
+
+    beerNameQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\='  + beerNameArray[i];
+    console.log('beernamearray[i]', beerNameArray[i]);
+    console.log('beerNameQuery', beerNameQuery);
+
+  // GET DATA FROM THE BEERS ENDPOINT, USING THE STRINGS JUST CREATED ^
+  $.ajax ({
+    method: 'GET',
+    url: beerNameQuery,
+    success: function (results) {
+      console.log('results', results);
+      // console.log("description1: ", results.data[0].description);
+      console.log("ID ", results.data[i].id);
+      console.log("Name: ", results.data[i].name);
+      // console.log("ABV: ", results.data[0].abv);
+    },
+    error: function (error) {
+      console.log("Error: ", error);
+    }
+  }); // pairs with $.ajax ({
+}
+}; //pairs with function createObjectForGets()
 
 createObjectForGets();
 
-// GET DATA FROM THE BEERS ENDPOINT
+// // GET DATA FROM THE BEERS ENDPOINT
 // $.ajax ({
 //   method: 'GET',
 //   url: 'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=amarillo%20Pale%20Ale',
@@ -70,7 +102,7 @@ createObjectForGets();
 // });
 
 
-// WILL NEED A RANDOM-NUMBER GENERATOR FOR PULLING BEER TO features
+// WILL NEED A RANDOM-NUMBER GENERATOR FOR PULLING FEATURED BEER
 
 
 // WILL NEED A FUNCTION FOR DOING THE AJAX CALL FOR THE RANDOM BEER

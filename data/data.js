@@ -12,18 +12,18 @@ breweryCountry: 'USA',
 beerDescription: 'American Wheat Beer, single-hopped with Amarillo hops. Crisp and fruity with notes of orange and grapefruit.',
 otherHops: 'None'
 },
-{
-brewer: 'Block 15',
-beerName: 'Print Master\’s Pale Ale',
-beerType: 'American Pale Ale',
-beerAbv: '5.5',
-beerIbu: '34',
-breweryCity: 'Corvallis',
-breweryState: 'OR',
-breweryCountry: 'USA',
-beerDescription: 'American Pale Ale brewed with 100 Amarillo hops.',
-otherHops: 'None'
-},
+// {
+// brewer: 'Block 15',
+// beerName: 'Pint Master\’s Pale Ale',
+// beerType: 'American Pale Ale',
+// beerAbv: '5.5',
+// beerIbu: '34',
+// breweryCity: 'Corvallis',
+// breweryState: 'OR',
+// breweryCountry: 'USA',
+// beerDescription: 'American Pale Ale brewed with 100 Amarillo hops.',
+// otherHops: 'None'
+// },
 {
 brewer: 'Three Floyds',
 beerName: 'Brian Boru',
@@ -350,18 +350,18 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Highland Brewing Company',
-beerName: 'Early\'s Hoppy Wheat Ale',
-beerType: '',
-beerAbv: '',
-beerIbu: '',
-breweryCity: '',
-breweryState: '',
-breweryCountry: '',
-beerDescription: '',
-otherHops: ''
-},
-{
+// brewer: 'Highland Brewing Company',
+// beerName: 'Early\'s Hoppy Wheat Ale',
+// beerType: '',
+// beerAbv: '',
+// beerIbu: '',
+// breweryCity: '',
+// breweryState: '',
+// breweryCountry: '',
+// beerDescription: '',
+// otherHops: ''
+// },
+// {
 brewer: 'Karbach Brewing Company',
 beerName: 'Hopadillo IPA',
 beerType: '',
@@ -565,18 +565,18 @@ breweryState: 'Somerset',
 breweryCountry: 'England',
 otherHops: ''
 },
-{
-brewer: 'Saxon Street Brewery',
-beerName: 'Chef Bourque\'Amarillo Cajun\'',
-beerType: '',
-beerAbv: '',
-beerIbu: '',
-beerDescription: '',
-breweryCity: '',
-breweryState: '',
-breweryCountry: 'USA',
-otherHops: ''
-},
+// {
+// brewer: 'Saxon Street Brewery',
+// beerName: 'Chef Bourque\'Amarillo Cajun\'',
+// beerType: '',
+// beerAbv: '',
+// beerIbu: '',
+// beerDescription: '',
+// breweryCity: '',
+// breweryState: '',
+// breweryCountry: 'USA',
+// otherHops: ''
+// },
 {
 brewer: 'Goose Island',
 beerName: 'Summer Ale',
@@ -770,18 +770,18 @@ breweryCountry: '',
 beerDescription: '',
 otherHops: ''
 },
-{
-brewer: 'Oskar Blues',
-beerName: 'G\'Knight',
-beerType: '',
-beerAbv: '',
-beerIbu: '',
-breweryCity: '',
-breweryState: '',
-breweryCountry: '',
-beerDescription: '',
-otherHops: ''
-},
+// {
+// brewer: 'Oskar Blues',
+// beerName: 'G\'Knight',
+// beerType: '',
+// beerAbv: '',
+// beerIbu: '',
+// breweryCity: '',
+// breweryState: '',
+// breweryCountry: '',
+// beerDescription: '',
+// otherHops: ''
+// },
 {
 brewer: 'Guineu',
 beerName: 'Ipa Amarillo',
