@@ -1,7 +1,7 @@
 // comment
 var beerInfo = [
 {
-brewer: 'Three Floyds',
+brewer: 'Three Floyds Brewing Company',
 beerName: 'Gumballhead',
 beerType: 'American Wheat Beer',
 beerAbv: '5.6',
@@ -25,7 +25,7 @@ otherHops: 'None'
 // otherHops: 'None'
 // },
 {
-brewer: 'Three Floyds',
+brewer: 'Three Floyds Brewing Company',
 beerName: 'Brian Boru',
 beerType: 'Irish Style Red Ale',
 beerAbv: '5.5',
@@ -121,7 +121,7 @@ breweryCountry: 'USA',
 otherHops: ''
 },
 {
-brewer: 'Revolution',
+brewer: 'Revolution Brewing',
 beerName: 'Rise',
 beerType: 'American Stout',
 beerAbv: '7.1',
@@ -145,7 +145,7 @@ breweryCountry: 'USA',
 otherHops: ''
 },
 {
-brewer: 'Heretic',
+brewer: 'Heretic Brewing Company',
 beerName: 'Tafelbully',
 beerType: 'Belgian Pale Ale',
 beerAbv: '4.8',
@@ -242,7 +242,7 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Knee Deep Brewing',
+brewer: 'Knee Deep Brewing Company',
 beerName: 'Hoparillo',
 beerType: 'Triple IPA',
 beerAbv: '',
@@ -338,7 +338,7 @@ breweryCountry: '',
 otherHops: ''
 },
 {
-brewer: 'Rogue',
+brewer: 'Rogue Ales',
 beerName: 'Yellow Snow IPA',
 beerType: '',
 beerAbv: '',
@@ -602,18 +602,18 @@ breweryCountry: '',
 beerDescription: '',
 otherHops: ''
 },
-{
-brewer: 'Boulevard Brewing Company',
-beerName: 'Tank 7 Farmhouse Ale',
-beerType: 'Ale',
-beerAbv: '',
-beerIbu: '',
-breweryCity: '',
-breweryState: '',
-breweryCountry: '',
-beerDescription: '',
-otherHops: ''
-},
+// {
+// brewer: 'Boulevard Brewing Company',
+// beerName: 'Tank 7 Farmhouse Ale',
+// beerType: 'Ale',
+// beerAbv: '',
+// beerIbu: '',
+// breweryCity: '',
+// breweryState: '',
+// breweryCountry: '',
+// beerDescription: '',
+// otherHops: ''
+// },
 {
 brewer: 'Flying Dog Brewery',
 beerName: 'Single Hop Amarillo',
