@@ -45,11 +45,10 @@ function createObjectForGets() {
     // brewerNameArray[i] = beerInfo[i].brewer;
     // console.log('objectForGets', objectForGets);
   };
-  //FORMULATE THE STRINGS FOR THE AJAX QUERIES
-  for (i = 0; i < 3; i++) {
 
+  //FORMULATE THE STRINGS FOR THE AJAX QUERIES
+  for (i = 1; i < beerNameArray.length; i++) {
     beerNameQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\='  + beerNameArray[i];
-    console.log('beernamearray[i]', beerNameArray[i]);
     console.log('beerNameQuery', beerNameQuery);
 
   // GET DATA FROM THE BEERS ENDPOINT, USING THE STRINGS JUST CREATED ^
@@ -57,17 +56,17 @@ function createObjectForGets() {
     method: 'GET',
     url: beerNameQuery,
     success: function (results) {
-      console.log('results', results);
       // console.log("description1: ", results.data[0].description);
-      console.log("ID ", results.data[i].id);
-      console.log("Name: ", results.data[i].name);
+      console.log(this);
+      console.log("ID ", results.data[0].id);
+      console.log("Name: ", results.data[0].name);
       // console.log("ABV: ", results.data[0].abv);
     },
     error: function (error) {
       console.log("Error: ", error);
     }
-  }); // pairs with $.ajax ({
-}
+    }); // pairs with $.ajax ({
+  } // pairs with the for loop
 }; //pairs with function createObjectForGets()
 
 createObjectForGets();

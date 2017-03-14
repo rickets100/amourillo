@@ -49,7 +49,7 @@ beerDescription: 'Ruby colored IPA which uses Amarillo for flavoring and is dry-
 otherHops: ''
 },
 {
-brewer: 'Lagunitas',
+brewer: 'Lagunitas Brewing Company',
 beerName: 'Lucky 13',
 beerType: 'Imperial Red Ale',
 beerAbv: '8.7',
@@ -61,67 +61,7 @@ beerDescription: 'Imperial Red Ale which features Amarillo hops for flavoring an
 otherHops: ''
 },
 {
-brewer: 'Founders',
-beerName: 'Red’s Rye IPA',
-beerType: 'Rye IPA',
-beerAbv: '6.6',
-beerIbu: '70',
-breweryCity: 'Grand Rapids',
-breweryState: 'MI',
-breweryCountry: 'USA',
-beerDescription: 'Rye IPA dry-hopped with Amarillo hops, creating a flavorful combination.',
-otherHops: ''
-},
-{
-brewer: 'Saint Arnold',
-beerName: 'Icon Series Amarillo Hefe',
-beerType: 'Hefeweizen',
-beerAbv: '5.4',
-beerIbu: '',
-beerDescription: 'Hefeweizen, unfiltered wheat beer which uses Amarillo hops for flavoring and aroma.',
-breweryCity: 'Houston',
-breweryState: 'TX',
-breweryCountry: 'USA',
-otherHops: ''
-},
-{
-brewer: 'Breakside Brewery',
-beerName: 'Amarillo Wheat',
-beerType: 'American Wheat Beer',
-beerAbv: '5.8',
-beerIbu: '',
-beerDescription: 'American Wheat Beer brewed with Amarillo hops and flavored with orange peel.',
-breweryCity: 'Portland',
-breweryState: 'OR',
-breweryCountry: 'USA',
-otherHops: ''
-},
-{
-brewer: 'BrewDog',
-beerName: 'Interstellar Red',
-beerType: 'India Red Ale',
-beerAbv: '6.5',
-beerIbu: '65',
-beerDescription: 'India Red Ale which uses Amarillo hops for flavoring and aroma.',
-breweryCity: '',
-breweryState: '',
-breweryCountry: 'Scotland',
-otherHops: ''
-},
-{
-brewer: 'Hopworks',
-beerName: 'IPX Single Hop Ale – Amarillo',
-beerType: 'IPA',
-beerAbv: '6.5',
-beerIbu: '60',
-beerDescription: 'IPA brewed with 100 Amarillo. Vibrant tangerine and citrus flavors.',
-breweryCity: 'Portland',
-breweryState: 'OR',
-breweryCountry: 'USA',
-otherHops: 'None'
-},
-{
-brewer: 'Dogfish Head',
+brewer: 'Dogfish Head Craft Brewery',
 beerName: 'Aprihop',
 beerType: 'IPA',
 beerAbv: '7',
@@ -145,8 +85,8 @@ breweryCountry: 'USA',
 otherHops: 'Simcoe'
 },
 {
-brewer: 'Alpine',
-beerName: 'Beer Duet',
+brewer: 'Alpine Beer',
+beerName: 'Duet',
 beerType: 'IPA',
 beerAbv: '7',
 beerIbu: '',
@@ -169,26 +109,14 @@ breweryCountry: 'USA',
 otherHops: ''
 },
 {
-brewer: 'Ale',
-beerName: 'Asylum Ballistic IPA',
+brewer: 'Ale Asylum',
+beerName: 'Ballistic IPA',
 beerType: 'American IPA',
 beerAbv: '7.5',
 beerIbu: '',
 beerDescription: 'American IPA which uses Amarillo for flavoring and aroma.',
 breweryCity: 'Madison',
 breweryState: 'WI',
-breweryCountry: 'USA',
-otherHops: ''
-},
-{
-brewer: 'Brash',
-beerName: 'Cold Ass Honky',
-beerType: 'Saison',
-beerAbv: '8.5',
-beerIbu: '',
-beerDescription: 'Strong Saison dry-hopped with Amarillo hops. Flavorful combination of Belgian yeast notes with tangerine hop aromas.',
-breweryCity: 'Ipswich',
-breweryState: 'MA',
 breweryCountry: 'USA',
 otherHops: ''
 },
@@ -290,18 +218,6 @@ beerDescription: '',
 otherHops: 'None'
 },
 {
-brewer: 'Elvis Brewery',
-beerName: 'Moldova Galaxy Amarillo Pale Ale',
-beerType: 'Pale Ale',
-beerAbv: '',
-beerIbu: '',
-breweryCity: '',
-breweryState: '',
-breweryCountry: '',
-beerDescription: '',
-otherHops: ''
-},
-{
 brewer: 'Maumee Bay',
 beerName: 'Amarillo Brillo',
 beerType: '',
@@ -311,7 +227,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: 'Columbus, Centennial, Simcoe'
 },
 {
 brewer: 'Dogfish Head',
@@ -327,8 +243,8 @@ otherHops: ''
 },
 {
 brewer: 'Knee Deep Brewing',
-beerName: 'Hoparillo Triple IPA',
-beerType: 'IPA',
+beerName: 'Hoparillo',
+beerType: 'Triple IPA',
 beerAbv: '',
 beerIbu: '',
 breweryCity: '',
@@ -338,32 +254,8 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'State of Mind session IPA',
-beerName: 'Collective Arts Brewing Limited',
-beerType: 'IPA',
-beerAbv: '',
-beerIbu: '',
-breweryCity: '',
-breweryState: '',
-breweryCountry: '',
-beerDescription: '',
-otherHops: ''
-},
-{
-// brewer: 'Highland Brewing Company',
-// beerName: 'Early\'s Hoppy Wheat Ale',
-// beerType: '',
-// beerAbv: '',
-// beerIbu: '',
-// breweryCity: '',
-// breweryState: '',
-// breweryCountry: '',
-// beerDescription: '',
-// otherHops: ''
-// },
-// {
-brewer: 'Karbach Brewing Company',
-beerName: 'Hopadillo IPA',
+brewer: 'Collective Arts Brewing',
+beerName: 'State of Mind',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -374,8 +266,8 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Brutal Brewing',
-beerName: 'Sir Taste-A-Lot',
+brewer: 'Wiper and True',
+beerName: 'Amber Amarillo',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -395,7 +287,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: 'Cascade'
 },
 {
 brewer: 'Brewdog',
@@ -410,9 +302,9 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Golden Eagle',
-beerName: 'Big Yank IPA',
-beerType: 'IPA',
+brewer: 'Grand Junction Brewing Co.',
+beerName: 'Amarillo Sunset',
+beerType: 'Imperial IPA',
 beerAbv: '',
 beerIbu: '',
 beerDescription: '',
@@ -422,7 +314,7 @@ breweryCountry: '',
 otherHops: ''
 },
 {
-brewer: 'Flying Monkeys',
+brewer: 'Blue Point Brewing',
 beerName: 'Hoptical Illusion',
 beerType: '',
 beerAbv: '',
@@ -435,8 +327,8 @@ otherHops: ''
 },
 {
 brewer: 'No-Li Brewhouse',
-beerName: 'Skyrail Expo Series IPA',
-beerType: '',
+beerName: 'Skyrail (Expo Series)',
+beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
 beerDescription: '',
@@ -458,8 +350,8 @@ breweryCountry: '',
 otherHops: ''
 },
 {
-brewer: 'Saltaire',
-beerName: 'Amarillo Gold',
+brewer: 'Hop Stuff Brewery',
+beerName: 'Amarillo Mild',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -470,8 +362,8 @@ breweryCountry: '',
 otherHops: ''
 },
 {
-brewer: 'Victory',
-beerName: 'Art Brew Black Sails IPA',
+brewer: 'Victory Art Brew',
+beerName: 'Black Sails IPA',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -482,20 +374,8 @@ breweryCountry: 'USA',
 otherHops: ''
 },
 {
-brewer: 'Hopworks Urban Brewery',
-beerName: 'IPX Single Hop Series: Amarillo',
-beerType: 'IPA',
-beerAbv: '6.6',
-beerIbu: '75',
-beerDescription: '',
-breweryCity: 'Portland',
-breweryState: 'OR',
-breweryCountry: 'USA',
-otherHops: ''
-},
-{
-brewer: 'New Republic',
-beerName: 'New Republic Brewing Bellows',
+brewer: 'New Republic Brewing Company',
+beerName: 'Bellows',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -507,7 +387,7 @@ otherHops: ''
 },
 {
 brewer: 'Kern River Brewing Company',
-beerName: 'Just Outstanding IPA - ',
+beerName: 'Just Outstanding IPA',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -530,7 +410,7 @@ breweryCountry: '',
 otherHops: 'None'
 },
 {
-brewer: 'De Molen',
+brewer: 'Brouwerij De Molen',
 beerName: 'Amarillo',
 beerType: '',
 beerAbv: '',
@@ -563,23 +443,23 @@ beerDescription: '',
 breweryCity: 'Evercreech',
 breweryState: 'Somerset',
 breweryCountry: 'England',
+otherHops: 'Mosaic'
+},
+{
+brewer: 'Wilmington Brewing Company',
+beerName: 'Amarillo Saison',
+beerType: '',
+beerAbv: '',
+beerIbu: '',
+beerDescription: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: 'USA',
 otherHops: ''
 },
-// {
-// brewer: 'Saxon Street Brewery',
-// beerName: 'Chef Bourque\'Amarillo Cajun\'',
-// beerType: '',
-// beerAbv: '',
-// beerIbu: '',
-// beerDescription: '',
-// breweryCity: '',
-// breweryState: '',
-// breweryCountry: 'USA',
-// otherHops: ''
-// },
 {
-brewer: 'Goose Island',
-beerName: 'Summer Ale',
+brewer: 'Goose Island Beer Company',
+beerName: 'Goose Summer Ale',
 beerType: 'Ale',
 beerAbv: '5',
 beerIbu: '33',
@@ -602,8 +482,8 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Trillium Brewing Company',
-beerName: 'Sleeper St IPA[',
+brewer: 'Trillium Brewing',
+beerName: 'Sleeper Street IPA',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -616,8 +496,8 @@ otherHops: ''
 },
 {
 brewer: 'Ale Asylum',
-beerName: 'Ballistic',
-beerType: '',
+beerName: 'Ballistic IPA',
+beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
 breweryCity: '',
@@ -627,19 +507,19 @@ beerDescription: '',
 otherHops: 'None'
 },
 {
-brewer: 'Yazoo',
+brewer: 'Yazoo Brewing Company',
 beerName: 'Pale Ale',
-beerType: '',
+beerType: 'American-Style Pale Ale',
 beerAbv: '',
 beerIbu: '',
 breweryCity: '',
 breweryState: '',
 breweryCountry: 'USA',
 beerDescription: '',
-otherHops: ''
+otherHops: 'Perle, Cascade'
 },
 {
-brewer: 'Smuttynose',
+brewer: 'Smuttynose Brewing Company',
 beerName: 'IPA',
 beerType: 'IPA',
 beerAbv: '',
@@ -652,8 +532,8 @@ otherHops: ''
 },
 {
 brewer: 'Central City Brewing Company',
-beerName: 'Red Racer IPA',
-beerType: '',
+beerName: 'Red Racer India Pale Ale',
+beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
 breweryCity: '',
@@ -663,9 +543,9 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Drake\'s Brewing Company',
-beerName: '1500 Dry Hopped Pale Ale',
-beerType: 'Pale Ale',
+brewer: 'Little Mountain Brewing Company',
+beerName: 'Amarillo Armadillo',
+beerType: 'American-style IPA',
 beerAbv: '',
 beerIbu: '',
 breweryCity: '',
@@ -675,8 +555,8 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Cricketers Arms',
-beerName: 'Spearhead Pale Ale',
+brewer: 'Taos Mesa Brewing',
+beerName: 'Amarillo Rojo',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -696,11 +576,11 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: 'Cascade, Citra'
 },
 {
-brewer: 'Stone',
-beerName: 'Levitation',
+brewer: 'Stone Brewing Co.',
+beerName: 'Stone Levitation Ale',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -711,9 +591,9 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Magic Hat',
+brewer: 'Magic Hat Brewing Company',
 beerName: 'Circus Boy',
-beerType: '',
+beerType: 'Hefeweizen',
 beerAbv: '',
 beerIbu: '',
 breweryCity: '',
@@ -723,8 +603,8 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Tank 7',
-beerName: 'Farmhouse Ale',
+brewer: 'Boulevard Brewing Company',
+beerName: 'Tank 7 Farmhouse Ale',
 beerType: 'Ale',
 beerAbv: '',
 beerIbu: '',
@@ -735,8 +615,8 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Flying Dog',
-beerName: 'Single Hop Imperial IPA',
+brewer: 'Flying Dog Brewery',
+beerName: 'Single Hop Amarillo',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -747,20 +627,8 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Flying Monkeys',
-beerName: 'The Matador Imperial IPA',
-beerType: 'IPA',
-beerAbv: '',
-beerIbu: '',
-breweryCity: '',
-breweryState: '',
-breweryCountry: '',
-beerDescription: '',
-otherHops: ''
-},
-{
-brewer: 'Noble Ale Works',
-beerName: 'Amarillo Showers',
+brewer: 'Crooked Ladder Brewery',
+beerName: 'Amarillo Pale Ale',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -770,21 +638,9 @@ breweryCountry: '',
 beerDescription: '',
 otherHops: ''
 },
-// {
-// brewer: 'Oskar Blues',
-// beerName: 'G\'Knight',
-// beerType: '',
-// beerAbv: '',
-// beerIbu: '',
-// breweryCity: '',
-// breweryState: '',
-// breweryCountry: '',
-// beerDescription: '',
-// otherHops: ''
-// },
 {
-brewer: 'Guineu',
-beerName: 'Ipa Amarillo',
+brewer: 'Alpha Brewing Co',
+beerName: 'Amarillo Pale Ale',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -795,8 +651,8 @@ beerDescription: '',
 otherHops: ''
 },
 {
-brewer: 'Bear Republic',
-beerName: 'Cafe Racer 15',
+brewer: 'Persephone Brewing Company',
+beerName: 'Amarillo Pilsner',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -807,25 +663,7 @@ beerDescription: '',
 otherHops: ''
 }];
 
-// Hangar 24 Craft Brewery Amarillo Pale Ale
-// The Kernel Pale Ale Amarillo[7]
-// Brooklyner-Schneider Hopfen-Weisse[9]
-// Duvel Tripel Hop 2007 & 2010 editions
-// Bewdley Brewery Jubilee Ale 2012
-// (512) IPA', Austin', Texas
-// Guineu Riner[10]
-// Kreativbrauerei Kehrwieder SHIPAA[19]
-// James Squire Golden Ale
-// Oppigårds Amarillo[23]
-// Deschutes Chasin' Freshies 2013 Release
-// Garage Project Angry Peaches
-// Smithwicks pale ale
-// Several Tree House Brewing Company beers
-// The Answer Brewpub She Gone
-// One Pine Brewing's Mentalist IPA
-// Reuben's Brews Hop Tropic
-
-
+// BLANK OBJECT FOR COPYING/PASTING
 // {
 // brewer: '',
 // beerName: '',
