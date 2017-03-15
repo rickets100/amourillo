@@ -54,28 +54,11 @@ function createObjectForGets() {
   // FORMULATE THE STRINGS FOR THE AJAX QUERIES: BEER
   for (i = 1; i < beerNameArray.length; i++) {
     beerNameQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&withBreweries=Y\&name\='  + beerNameArray[i];
-    console.log('beerNameQuery', beerNameQuery);
   } // pairs with the for loop
 
   //FORMULATE THE STRINGS FOR THE AJAX QUERIES: BREWERIES
   for (i = 1; i < brewerNameArray.length; i++) {
     brewerNameQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/breweries\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&withBreweries=Y\&name\='  + brewerNameArray[i];
-    console.log('brewerNameQuery', brewerNameQuery);
-
-    // GET DATA FROM THE BREWERS ENDPOINT, USING THE STRINGS JUST CREATED ^
-    // $.ajax ({
-    //   method: 'GET',
-    //   url: brewerNameQuery,
-    //   success: function (results) {
-    //     console.log(this);
-    //     // console.log("ID ", results.data[0].id);
-    //     // console.log("Name: ", results.data[0].name);
-    //     // console.log("description: ", results.data[0].description);
-    //   },
-    //   error: function (error) {
-    //     console.log("Error: ", error);
-    //   }
-    // }); // pairs with $.ajax for brewers
   } // pairs with the for loop for brewers
 }; //pairs with function createObjectForGets()
 
@@ -125,11 +108,34 @@ $('#featured-beer').on('click', function(e) {
       success: function (results) {
         console.log(results);
         var thisName = results.data.name;
-        console.log('this name', thisName);
         var thisBrewer = results.data.breweries[0].name;
+        var thisAbv = results.data.abv;
+        var thisIbu = results.data.ibu;
 
         // update the placeholder paragraph
-        $("#featured-beer-data").text(thisName = '\n' + thisBrewer);
+        if (thisAbv) {
+          if (thisIbu) {
+            // all 4 things get displayed
+            $("#featured-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>` + `<p>IBU: ${thisIbu}</p>`);
+          }
+          else {
+            // beer name, brewery & Abv get displayed
+            $("#featured-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>`);
+          };
+        }
+        else {
+          if (thisIbu) {
+            // beer name, brewery and Ibu get displayed
+            $("#featured-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>IBU: ${thisIbu}</p>`);
+          }
+          else {
+            // only beer name and brewery get displayed
+            $("#featured-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>`);
+          };
+        };
+
+        // update the image label
+        $("#featured-beer-name").remove();
 
         // update the image
         if (results.data.labels) {
@@ -143,27 +149,16 @@ $('#featured-beer').on('click', function(e) {
       error: function (error) {
         console.log("Error: ", error);
       }
+
     });
 
+    $('.image-as-link.img').on('click', function(e) {
+      console.log('hey');
+      $(".card-title").html('please work');
+      });
 
-    // update the <span class="card-title">Featured Beer</span>
-
-    // update the <p>
   });
 
 
 
-// WILL NEED A RANDOM-NUMBER GENERATOR FOR PULLING FEATURED BEER
-// let size = beerNameArray.length;
-// let randomIndex = Math.floor(Math.random() * (size-1));
-
-// WILL NEED A FUNCTION FOR DOING THE AJAX CALL FOR THE RANDOM BEER
-
-
 // WILL NEED A SORT-BY-STATE DROPDOWN
-
-
-// WILL NEED A SORT-BY-BEER-NAME DROPDOWN
-
-
-// WILL NEED A SORT-BY-BREWER DROPDOWN
