@@ -3,6 +3,7 @@ var beerInfo = [
 {
 brewer: 'Three Floyds Brewing Company',
 beerName: 'Gumballhead',
+beerId: 'BJKbGa',
 beerType: 'American Wheat Beer',
 beerAbv: '5.6',
 beerIbu: '35',
@@ -27,6 +28,7 @@ otherHops: 'None'
 {
 brewer: 'Three Floyds Brewing Company',
 beerName: 'Brian Boru',
+beerId: 'wH4NHi',
 beerType: 'Irish Style Red Ale',
 beerAbv: '5.5',
 beerIbu: '40',
@@ -39,6 +41,7 @@ otherHops: ''
 {
 brewer: 'Green Flash',
 beerName: 'Hop Head Red',
+beerId: 'y2ZQbD',
 beerType: 'IPA',
 beerAbv: '7',
 beerIbu: '70',
@@ -51,6 +54,7 @@ otherHops: ''
 {
 brewer: 'Lagunitas Brewing Company',
 beerName: 'Lucky 13',
+beerId: 'CWwxeR',
 beerType: 'Imperial Red Ale',
 beerAbv: '8.7',
 beerIbu: '77',
@@ -63,6 +67,7 @@ otherHops: ''
 {
 brewer: 'Dogfish Head Craft Brewery',
 beerName: 'Aprihop',
+beerId: 'qV0bBx',
 beerType: 'IPA',
 beerAbv: '7',
 beerIbu: '50',
@@ -75,6 +80,7 @@ otherHops: ''
 {
 brewer: 'Kern River',
 beerName: 'Just Outstanding IPA',
+beerId: 'Uo3q4P',
 beerType: 'IPA',
 beerAbv: '6.8',
 beerIbu: '',
@@ -87,6 +93,7 @@ otherHops: 'Simcoe'
 {
 brewer: 'Alpine Beer',
 beerName: 'Duet',
+beerId: '4IgtHY',
 beerType: 'IPA',
 beerAbv: '7',
 beerIbu: '',
@@ -97,8 +104,9 @@ breweryCountry: 'USA',
 otherHops: 'Simcoe'
 },
 {
-brewer: 'Hangar 24',
+brewer: 'Hangar 24 Craft Brewery',
 beerName: 'Amarillo Pale Ale',
+beerId: 'zcLvfr',
 beerType: 'American Pale Ale',
 beerAbv: '5.5',
 beerIbu: '35',
@@ -111,6 +119,7 @@ otherHops: ''
 {
 brewer: 'Ale Asylum',
 beerName: 'Ballistic IPA',
+beerId: 'MOaHtz',
 beerType: 'American IPA',
 beerAbv: '7.5',
 beerIbu: '',
@@ -123,6 +132,7 @@ otherHops: ''
 {
 brewer: 'Revolution Brewing',
 beerName: 'Rise',
+beerId: 'sBSFkh',
 beerType: 'American Stout',
 beerAbv: '7.1',
 beerIbu: '55',
@@ -135,6 +145,7 @@ otherHops: 'Chinook'
 {
 brewer: 'Ninkasi',
 beerName: 'Total Crystalation',
+beerId: '2MgOSH',
 beerType: 'Fresh-Hopped IPA',
 beerAbv: '6.7',
 beerIbu: '65',
@@ -147,6 +158,7 @@ otherHops: ''
 {
 brewer: 'Heretic Brewing Company',
 beerName: 'Tafelbully',
+beerId: 'EwW4cy',
 beerType: 'Belgian Pale Ale',
 beerAbv: '4.8',
 beerIbu: '26',
@@ -160,6 +172,7 @@ otherHops: 'Sorachi'
 {
 brewer: 'Rogue',
 beerName: 'Juniper Pale Ale',
+beerId: '8c4XAF',
 beerType: 'American Pale Ale',
 beerAbv: '5.2',
 beerIbu: '34',
@@ -172,6 +185,7 @@ otherHops: 'Styrian Golding'
 {
 brewer: 'Ithaca',
 beerName: 'Cascazilla',
+beerId: 'pBfN8o',
 beerType: 'India Red Ale',
 beerAbv: '7',
 beerIbu: '',
@@ -184,6 +198,7 @@ otherHops: 'Cascade',
 {
 brewer: 'Fremont',
 beerName: 'Summer Ale',
+beerId: 'f9z6Ra',
 beerType: 'Golden Ale',
 beerAbv: '5.2',
 beerIbu: '',
@@ -196,6 +211,7 @@ otherHops: 'None'
 {
 brewer: 'Terrapin',
 beerName: 'Rye Pale Ale',
+beerId: 'QXkarn',
 beerType: 'American Rye Ale',
 beerAbv: '5.5',
 beerIbu: '35',
@@ -208,6 +224,7 @@ otherHops: ''
 {
 brewer: 'Excel Brewing Company',
 beerName: 'Flash Bang',
+beerId: 'ABsJvV',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -220,6 +237,7 @@ otherHops: 'None'
 {
 brewer: 'Maumee Bay',
 beerName: 'Amarillo Brillo',
+beerId: 'KLudac',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -232,6 +250,7 @@ otherHops: 'Columbus, Centennial, Simcoe'
 {
 brewer: 'Dogfish Head',
 beerName: '60 Minute IPA',
+beerId: 'TACnR2',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -244,6 +263,7 @@ otherHops: ''
 {
 brewer: 'Knee Deep Brewing Company',
 beerName: 'Hoparillo',
+beerId: '1rBLbZ',
 beerType: 'Triple IPA',
 beerAbv: '',
 beerIbu: '',
@@ -256,6 +276,7 @@ otherHops: ''
 {
 brewer: 'Collective Arts Brewing',
 beerName: 'State of Mind',
+beerId: 'yzPpzS',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -268,6 +289,7 @@ otherHops: ''
 {
 brewer: 'Wiper and True',
 beerName: 'Amber Amarillo',
+beerId: 'D2cOyM',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -280,6 +302,7 @@ otherHops: ''
 {
 brewer: 'New Belgium',
 beerName: 'Mighty Arrow',
+beerId: 'PLK3WP',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -292,6 +315,7 @@ otherHops: 'Cascade'
 {
 brewer: 'Brewdog',
 beerName: '77 Lager',
+beerId: 'M522pB',
 beerType: 'Lager',
 beerAbv: '',
 beerIbu: '',
@@ -304,6 +328,7 @@ otherHops: ''
 {
 brewer: 'Grand Junction Brewing Co.',
 beerName: 'Amarillo Sunset',
+beerId: '1qyNl8',
 beerType: 'Imperial IPA',
 beerAbv: '',
 beerIbu: '',
@@ -316,6 +341,7 @@ otherHops: ''
 {
 brewer: 'Blue Point Brewing',
 beerName: 'Hoptical Illusion',
+beerId: 'PgJerL',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -328,6 +354,7 @@ otherHops: ''
 {
 brewer: 'No-Li Brewhouse',
 beerName: 'Skyrail (Expo Series)',
+beerId: 'wVq2W2',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -340,6 +367,7 @@ otherHops: ''
 {
 brewer: 'Rogue Ales',
 beerName: 'Yellow Snow IPA',
+beerId: '5Zsimo',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -352,6 +380,7 @@ otherHops: ''
 {
 brewer: 'Hop Stuff Brewery',
 beerName: 'Amarillo Mild',
+beerId: 'VOUZYC',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -364,6 +393,7 @@ otherHops: ''
 {
 brewer: 'Victory Art Brew',
 beerName: 'Black Sails IPA',
+beerId: 'GxxKWe',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -376,6 +406,7 @@ otherHops: ''
 {
 brewer: 'New Republic Brewing Company',
 beerName: 'Bellows',
+beerId: 'WyMDNI',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -388,6 +419,7 @@ otherHops: ''
 {
 brewer: 'Kern River Brewing Company',
 beerName: 'Just Outstanding IPA',
+beerId: 'Uo3q4P',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -400,6 +432,7 @@ otherHops: ''
 {
 brewer: 'Mikkeller',
 beerName: 'Single Hop Amarillo IPA',
+beerId: 'dRqYP3',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -412,6 +445,7 @@ otherHops: 'None'
 {
 brewer: 'Brouwerij De Molen',
 beerName: 'Amarillo',
+beerId: 'PiDWBZ',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -425,6 +459,7 @@ otherHops: ''
 {
 brewer: 'Fremont Brewing Company',
 beerName: 'Summer Ale',
+beerId: 'f9z6Ra',
 beerType: 'Ale',
 beerAbv: '5.2',
 beerIbu: '',
@@ -436,6 +471,7 @@ otherHops: ''
 {
 brewer: 'Wild Beer Co.',
 beerName: 'Bibble',
+beerId: 'twSEcs',
 beerType: '4.2',
 beerAbv: '',
 beerIbu: '',
@@ -448,6 +484,7 @@ otherHops: 'Mosaic'
 {
 brewer: 'Wilmington Brewing Company',
 beerName: 'Amarillo Saison',
+beerId: 'LZUQbF',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -460,6 +497,7 @@ otherHops: ''
 {
 brewer: 'Goose Island Beer Company',
 beerName: 'Goose Summer Ale',
+beerId: 'gdnCdH',
 beerType: 'Ale',
 beerAbv: '5',
 beerIbu: '33',
@@ -472,6 +510,7 @@ otherHops: ''
 {
 brewer: 'Switchback',
 beerName: 'Roasted Red Ale',
+beerId: 'DvXGcA',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -484,6 +523,7 @@ otherHops: ''
 {
 brewer: 'Trillium Brewing',
 beerName: 'Sleeper Street IPA',
+beerId: 'onUwgj',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -497,6 +537,7 @@ otherHops: ''
 {
 brewer: 'Ale Asylum',
 beerName: 'Ballistic IPA',
+beerId: 'MOaHtz',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -509,6 +550,7 @@ otherHops: 'None'
 {
 brewer: 'Yazoo Brewing Company',
 beerName: 'Pale Ale',
+beerId: 'oRcuap',
 beerType: 'American-Style Pale Ale',
 beerAbv: '',
 beerIbu: '',
@@ -520,7 +562,8 @@ otherHops: 'Perle, Cascade'
 },
 {
 brewer: 'Smuttynose Brewing Company',
-beerName: 'IPA',
+beerName: 'Finestkind IPA',
+beerId: '3RFxH6',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -528,11 +571,12 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: 'USA',
 beerDescription: '',
-otherHops: ''
+otherHops: 'Simcoe, Santiams'
 },
 {
 brewer: 'Central City Brewing Company',
 beerName: 'Red Racer India Pale Ale',
+beerId: 'Lak6hY',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -545,6 +589,7 @@ otherHops: ''
 {
 brewer: 'Little Mountain Brewing Company',
 beerName: 'Amarillo Armadillo',
+beerId: 'QnFa4U',
 beerType: 'American-style IPA',
 beerAbv: '',
 beerIbu: '',
@@ -557,6 +602,7 @@ otherHops: ''
 {
 brewer: 'Taos Mesa Brewing',
 beerName: 'Amarillo Rojo',
+beerId: '4a3ARF',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -569,6 +615,7 @@ otherHops: ''
 {
 brewer: '4 Pines Brewing Company',
 beerName: 'Pale Ale',
+beerId: 'dt1WTN',
 beerType: 'Pale Ale',
 beerAbv: '',
 beerIbu: '',
@@ -581,6 +628,7 @@ otherHops: 'Cascade, Citra'
 {
 brewer: 'Stone Brewing Co.',
 beerName: 'Stone Levitation Ale',
+beerId: 'OaZYgf',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -593,6 +641,7 @@ otherHops: ''
 {
 brewer: 'Magic Hat Brewing Company',
 beerName: 'Circus Boy',
+beerId: 'JQCCB0',
 beerType: 'Hefeweizen',
 beerAbv: '',
 beerIbu: '',
@@ -602,21 +651,23 @@ breweryCountry: '',
 beerDescription: '',
 otherHops: ''
 },
-// {
-// brewer: 'Boulevard Brewing Company',
-// beerName: 'Tank 7 Farmhouse Ale',
-// beerType: 'Ale',
-// beerAbv: '',
-// beerIbu: '',
-// breweryCity: '',
-// breweryState: '',
-// breweryCountry: '',
-// beerDescription: '',
-// otherHops: ''
-// },
+{
+brewer: 'Boulevard Brewing Company',
+beerName: 'Tank 7 Farmhouse Ale',
+beerId: 'lDiXyX',
+beerType: 'Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ''
+},
 {
 brewer: 'Flying Dog Brewery',
 beerName: 'Single Hop Amarillo',
+beerId: 'HPP7VF',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -629,6 +680,7 @@ otherHops: ''
 {
 brewer: 'Crooked Ladder Brewery',
 beerName: 'Amarillo Pale Ale',
+beerId: 'peS5wT',
 beerType: '',
 beerAbv: '',
 beerIbu: '',
@@ -641,6 +693,7 @@ otherHops: ''
 {
 brewer: 'Alpha Brewing Co',
 beerName: 'Amarillo Pale Ale',
+beerId: '1AU6dw',
 beerType: 'IPA',
 beerAbv: '',
 beerIbu: '',
@@ -653,6 +706,7 @@ otherHops: ''
 {
 brewer: 'Persephone Brewing Company',
 beerName: 'Amarillo Pilsner',
+beerId: 'Ztalfk',
 beerType: '',
 beerAbv: '',
 beerIbu: '',

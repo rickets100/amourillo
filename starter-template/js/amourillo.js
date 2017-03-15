@@ -15,18 +15,6 @@ http http://api.brewerydb.com/v2/breweries\?key\=432671cad45a2c4cd0b97ddf1fe4adb
 */
 
 /*
- // API key for Mug Match (Face++): ttXPeCMmB4O28qFxZ-M9DuZ8yv2dBB5n
-*/
-
-/*
-beer endpoint:
-name: object.data[1].name
-abv: object.data[2].abv
-ibu: object.data[2].ibu
-description1: object.data[1].description
-description2: object.data[2].description
-ingredients: data.ingredients
-
 syntax for the get
 jQuery.get( url [, data ] [, success ] [, dataType ] )
 $.get
@@ -38,55 +26,40 @@ var beerNameArray = [];
 var beerNameArrayPlain = [];
 var brewerNameArray = [];
 var brewerNamerArrayPlain = [];
+var beerNameQuery = '';
+var brewerNameQuery = '';
+var beerIdArray = [];
+var beerIdArrayPlain = [];
+var beerIdQuery = '';
 
-// PULL DATA FROM THE DATA FILE
+
+// PULL DATA FROM THE LOCAL DATA FILE
 // Note: beerInfo is the array of objects stored in data.js
 function createObjectForGets() {
-  var beerNameQuery = '';
-  var brewerNameQuery = '';
 
-  // CREATE THE ARRAYS FOR THE AJAX QUERIES: BOTH
+  // CREATE THE ARRAYS FOR THE AJAX QUERIES (NAME, ID, BREWER)
   for (let i = 0; i <beerInfo.length; i++) {
     objectForGets.beerName = beerInfo[i].beerName;
-    beerNameArrayPlain[i] = (beerInfo[i].beerName);
+    beerNameArrayPlain[i] = beerInfo[i].beerName;
     beerNameArray[i] = escape(beerInfo[i].beerName);
 
+    objectForGets.beerId = beerInfo[i].beerId;
+    beerIdArray[i] = beerInfo[i].beerId;
+
     objectForGets.brewer = beerInfo[i].brewer;
-    brewerNamerArrayPlain[i] = beerInfo[i].brewer
+    brewerNamerArrayPlain[i] = beerInfo[i].brewer;
     brewerNameArray[i] = escape(beerInfo[i].brewer);
-    console.log('objectForGets', objectForGets);
   }; // for loop
 
   // FORMULATE THE STRINGS FOR THE AJAX QUERIES: BEER
   for (i = 1; i < beerNameArray.length; i++) {
-    beerNameQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\='  + beerNameArray[i];
+    beerNameQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&withBreweries=Y\&name\='  + beerNameArray[i];
     console.log('beerNameQuery', beerNameQuery);
-
-    // GET DATA FROM THE BEERS ENDPOINT, USING THE STRINGS JUST CREATED ^
-    // $.ajax ({
-    //   method: 'GET',
-    //   url: beerNameQuery,
-    //   success: function (results) {
-    //     console.log(this);
-    //     console.log("ID ", results.data[0].id);
-    //     console.log("Name: ", results.data[0].name);
-    //     if (results.data[0].description) {
-    //       console.log("description: ", results.data[0].description);
-    //     }
-    //     else {
-    //       console.log("no description available");
-    //     }
-    //     // console.log("ABV: ", results.data[0].abv);
-    //   },
-    //   error: function (error) {
-    //     console.log("Error: ", error);
-    //   }
-    // }); // pairs with $.ajax for beers
   } // pairs with the for loop
 
   //FORMULATE THE STRINGS FOR THE AJAX QUERIES: BREWERIES
   for (i = 1; i < brewerNameArray.length; i++) {
-    brewerNameQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/breweries\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\='  + brewerNameArray[i];
+    brewerNameQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/breweries\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&withBreweries=Y\&name\='  + brewerNameArray[i];
     console.log('brewerNameQuery', brewerNameQuery);
 
     // GET DATA FROM THE BREWERS ENDPOINT, USING THE STRINGS JUST CREATED ^
@@ -106,53 +79,78 @@ function createObjectForGets() {
   } // pairs with the for loop for brewers
 }; //pairs with function createObjectForGets()
 
-// GENERATE THE HTML FOR THE SEARCH-BY-NAME DROPDOWN
-$('.dropdown-button').dropdown({
-     inDuration: 300,
-     outDuration: 225,
-     constrainWidth: false, // Does not change width of dropdown to that of the activator
-     hover: true, // Activate on hover
-     gutter: 0, // Spacing from edge
-     belowOrigin: false, // Displays dropdown below the button
-     alignment: 'left', // Displays dropdown with edge aligned to the left of button
-     stopPropagation: false // Stops event propagation
-   }
- );
+//FORMULATE THE STRINGS FOR THE AJAX QUERIES: BEERID
+for (i = 1; i < beerIdArray.length; i++) {
+  console.log('beerIdArray[i], beerIdArray[i]');
+  beerIdQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/beer\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&withBreweries=Y\&beerId\='  + beerIdArray[i];
+}
 
-$(function() {
-  for (var i = 0; i < beerNameArrayPlain.length; i++) {
-     var beer = beerNameArrayPlain[i].replace(/\s+/g, '-').toLowerCase();
-      $('#list-of-beers').append("<option value='" + beer + "'>" + beerNameArrayPlain[i] + "</option>");
-      console.log(("<option value='" + beer + "'>" + beerNameArrayPlain[i] + "</option> \n"));
-    }
-});
+// this is currrently-abandoned attempt to get dropdown working
+// GENERATE THE HTML FOR THE SEARCH-BY-NAME DROPDOWN
+// $('.dropdown-button').dropdown({
+//      inDuration: 300,
+//      outDuration: 225,
+//      constrainWidth: false, // Does not change width of dropdown to that of the activator
+//      hover: true, // Activate on hover
+//      gutter: 0, // Spacing from edge
+//      belowOrigin: false, // Displays dropdown below the button
+//      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+//      stopPropagation: false // Stops event propagation
+//    });
+
+// $(function() {
+//   for (var i = 0; i < beerNameArrayPlain.length; i++) {
+//      var beer = beerNameArrayPlain[i].replace(/\s+/g, '-').toLowerCase();
+//       $('#list-of-beers').append("<option value='" + beer + "'>" + beerNameArrayPlain[i] + "</option>");
+//       console.log(("<option value='" + beer + "'>" + beerNameArrayPlain[i] + "</option> \n"));
+//     }
+// });
 
 
 createObjectForGets();
 
 // GENERATE A NEW FEATURED BEER WHEN THE REPLAY BUTTON IS CLICKED
-$(function() {
-  $('#color-picker').change(function(){
-    brushColor = $('#color-picker').val();
-    console.log('brushColor', brushColor);
+$('#featured-beer').on('click', function(e) {
+    // generate a random # between 0 and array length
+    let randomIndex = 0;
+    randomIndex = Math.floor(Math.random() * (beerIdArray.length-1));
+
+    // formulate the string for the ajax Query
+    beerIdQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&withBreweries=Y\&beerId\='  + beerIdArray[randomIndex];
+
+    // update the placeholder image <img src="images/small-hops2.jpg">
+    $.ajax ({
+      method: 'GET',
+      url: beerIdQuery,
+      success: function (results) {
+        console.log(results);
+        var thisName = results.data.name;
+        console.log('this name', thisName);
+        var thisBrewer = results.data.breweries[0].name;
+
+        // update the placeholder paragraph
+        $("#featured-beer-data").text(thisName = '\n' + thisBrewer);
+
+        // update the image
+        if (results.data.labels) {
+          console.log('labels ', results.data.labels);
+          $("#featured-beer-image").attr("src", results.data.labels.medium);
+        }
+        else {
+          $("#featured-beer-image").attr("src", 'images/pint-glass-with-boca-cropped.png');
+        }
+      },
+      error: function (error) {
+        console.log("Error: ", error);
+      }
+    });
+
+
+    // update the <span class="card-title">Featured Beer</span>
+
+    // update the <p>
   });
-}
-// // GET DATA FROM THE BREWERIES ENDPOINT, USING STRINGS JUST CREATED
-// $.ajax ({
-//   method: 'GET',
-//   url: 'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=amarillo%20Pale%20Ale',
-//   success: function (results) {
-//     console.log(results);
-//     console.log("description: ", results.data[0].description);
-//     console.log("ID ", results.data[0].id);
-//     console.log("Name: ", results.data[0].name);
-//     console.log("ABV: ", results.data[0].abv);
-//
-//   },
-//   error: function (error) {
-//     console.log("Error: ", error);
-//   }
-// });
+
 
 
 // WILL NEED A RANDOM-NUMBER GENERATOR FOR PULLING FEATURED BEER
