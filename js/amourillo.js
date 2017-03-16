@@ -60,36 +60,30 @@ createListOfBeers();
 // GENERATE A NEW FEATURED BEER WHEN THE REPLAY BUTTON IS CLICKED
 $('#featured-beer').on('click', function(e) {
   let randomIndex = Math.floor(Math.random() * (beerIdArray.length-1));
-  let crossorigin = 'http://galvanize-cors-proxy.herokuapp.com/';
+  let crossorigin = 'https://crossorigin.me/';
+  let proxie = 'http://galvanize-cors-proxy.herokuapp.com/';
   let beerApi = 'http://api.brewerydb.com/v2/beers/';
   let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
   let params = '\&withBreweries=Y';
   let beerId = `\&beerId\=${beerIdArray[randomIndex]}`;
-  let beerIdQuery = `${crossorigin}${beerApi}${apiKey}${beerId}${params}`;
-
-  // http://api.brewerydb.com/v2/beers
-  // \?key\=432671cad45a2c4cd0b97ddf1fe4adb0
-  // \&withBreweries=Y
-  // \&beerId\=' + beerIdArray[randomIndex]
-
+  let beerIdQuery = `${proxie}${beerApi}${apiKey}${beerId}${params}`;
 
   // update the placeholder image
   $.ajax ({
     method: 'GET',
-    dataType: 'jsonp',
     url: beerIdQuery,
     beforeSend: function(xhr) {
       xhr.setRequestHeader( 'Access-Control-Allow-Headers', '*' );
     },
-    success: function (results) {
-      console.log('*************', results);
+    success: function(results) {
       var thisName = results.data.name;
       var thisBrewer = results.data.breweries[0].name;
       var thisAbv = results.data.abv;
       var thisIbu = results.data.ibu;
       var thisDescription = results.data.description;
-      var backupDescripton = results.data.style.description;
-      var thisLocation = results.data.breweries.locations.locality + ', '  + results.data.breweries.locations.region;
+      var backupDescription = results.data.style.description;
+      console.log(results);
+      // var thisLocation = results.data.breweries.locations.locality + ', '  + results.data.breweries.locations.region;
 
       // update the placeholder paragraph
       if (thisAbv) {
@@ -122,19 +116,19 @@ $('#featured-beer').on('click', function(e) {
         $("#featured-beer-image").attr("src", results.data.labels.medium);
       }
       else {
-        $("#featured-beer-image").attr("src", 'images/pint-glass-with-boca-cropped.png');
+        $("#featured-beer-image").attr("src", 'images/pint-glass-with-boca-cropped-525x350.png');
       }
 
+      console.log(beerIdQuery);
       // update the information that will show upon card-reveal
       $('.activator').on('click', function(e) {
         if (thisDescription) {
           $(".card-reveal p").html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
         }
         else {
-          $(".card-reveal p").html(`<p><b>${thisName}</b></p>` + `<p>${backupDescription}</p>`);
+          $(".card-reveal p").html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
         }
       });
-      console.log('jjj');
     },
     error: function (error) {
     }
