@@ -37,23 +37,27 @@ function createObjectForGets() {
     objectForGets.beerId = beerInfo[i].beerId;
     beerIdArray[i] = beerInfo[i].beerId;
   };
+  console.log('CREATE THE ARRAY FOR THE AJAX QUERY BY ID');
+  console.log('beerIdArray length = ', beerIdArray.length);
 };
 
 //FORMULATE THE STRINGS FOR THE AJAX QUERIES: BEERID
-for (i = 1; i < beerIdArray.length; i++) {
+for (i = 0; i < beerIdArray.length; i++) {
+  console.log('//FORMULATE THE STRINGS FOR THE AJAX QUERIES: BEERID');
   console.log('beerIdArray[i], beerIdArray[i]');
   beerIdQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/beer\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&withBreweries=Y\&beerId\='  + beerIdArray[i];
 };
 
 // GENERATE THE LIST OF ITEMS FOR THE LISTBOX
 $('#list-of-beers').on('click', function(e) {
+  console.log('hey');
   for (var i = 0; i < beerInfo.length; i++) {
     var beer = beerInfo[i].beerName;
     var beerHyphenated = beer.replace(/\s+/g, '-').toLowerCase();
     $('#list-of-beers').append("<option value='" + beer + "'>" + beer + "</option>");
     console.log(("<option value='" + beerHyphenated + "'>" + beer + "</option> \n"));
   }
-})
+});
 
 createObjectForGets();
 
@@ -66,7 +70,7 @@ $('#featured-beer').on('click', function(e) {
     // formulate the string for the ajax Query
     beerIdQuery = 'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&withBreweries=Y\&beerId\='  + beerIdArray[randomIndex];
 
-    // update the placeholder image 
+    // update the placeholder image
     $.ajax ({
       method: 'GET',
       url: beerIdQuery,
