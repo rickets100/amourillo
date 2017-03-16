@@ -57,12 +57,26 @@ function createListOfBeers() {
 createObjectForGets();
 createListOfBeers();
 
+// DISPLAY THE CHOSEN BEER'S INFO WHEN CHOSEN IN THE SELECT BOX
+$('#list-of-beers').on('change', function(e) {
+  console.log('lkdjg;ag;dob');
+  // let crossorigin = 'https://crossorigin.me/';
+  // let proxie = 'https://galvanize-cors-proxy.herokuapp.com/';
+  // let beerApi = 'https://api.brewerydb.com/v2/beers/';
+  // let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
+  // let params = '\&withBreweries=Y';
+  // let beerId = `\&beerId\=${beerIdArray[randomIndex]}`;
+  // let beerIdQuery = `${proxie}${beerApi}${apiKey}${beerId}${params}`;
+
+})
+
+
 // GENERATE A NEW FEATURED BEER WHEN THE REPLAY BUTTON IS CLICKED
 $('#featured-beer').on('click', function(e) {
   let randomIndex = Math.floor(Math.random() * (beerIdArray.length-1));
   let crossorigin = 'https://crossorigin.me/';
-  let proxie = 'http://galvanize-cors-proxy.herokuapp.com/';
-  let beerApi = 'http://api.brewerydb.com/v2/beers/';
+  let proxie = 'https://galvanize-cors-proxy.herokuapp.com/';
+  let beerApi = 'https://api.brewerydb.com/v2/beers/';
   let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
   let params = '\&withBreweries=Y';
   let beerId = `\&beerId\=${beerIdArray[randomIndex]}`;
