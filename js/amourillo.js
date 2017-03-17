@@ -224,5 +224,4 @@ $('#featured-beer').on('click', function(e) {
 
 $("#modal1").on('click', function(e) {
   $('#modal1').modal('close');
-
 });
