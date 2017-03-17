@@ -57,109 +57,117 @@
             <div class="col s12 m12">
               <div class="card">
                 <div id="left-image" class="card-image">
-                    <img id="selected-beer-image" src="images/small-hops2-298x197.jpg" class="activator">
+                  <img id="selected-beer-image" src="images/small-hops2-298x197.jpg" class="activator">
                   <span id="selected-beer-name" class="card-title">Search by Name</span>
-                </div>
-                <div id="selected-beer-data" class="card-content">
-                  <p>Choose from a list to learn more about a particular amarillo-hopped beer.</p>
-                </div>
-                <div id="left-card" class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-                <div class="input-field">
-                  <select id="list-of-beers">
-                    <option value="" disabled selected>Pick a Beer</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--   "ABOUT AMARILLO" CARD(LINK TO PLACEHOLDER PAGE) -->
-        <div class="col s12 m4">
-          <div class="card">
-            <div id="middle-image" class="card-image">
-              <div>
-                <img id="middle-item-image" class="activator" src="images/small-hops2-298x197.jpg">
-              </div>
-              <span id="middle-item-name" class="card-title">About amarillo</span>
-
-              <!-- Modal Trigger -->
-              <button id="middle-item-link" data-target="modal1" class="material-icons btn-floating halfway-fab waves-effect waves-light red">&#x21aa</a>
-            </div>
-            <div class="card-content">
-              <p> Though not as well-known as the Mosaic or Cascade varietals, Amarillo hops are essential for lending citrusy notes to beer. They are most widely used in pale ales and India pale ales.</p>
-            </div>
-
-
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal">
-              <div class="modal-content">
-                <h4>The Amarillo Hop</h4>
-                <p>8-11% Apha Acids • Domestic • Dual Purpose Hop</p>
-                <p>Popular American mid-range alpha acid variety with a unique and distinct aroma. It has a flowery, citrus like aroma; more orange than grapefruit.</p>
-                <p>Used For:  Pale Ales, IPAs, Porters</p>
-                <p>Aroma:  Specific aroma descriptors include grapefruit, orange, lemon, melon, apricot and peach.</p>
-                <p>Substitutes:  Cascade, Centennial</p>
-              </div>
-              <div class="modal-footer">
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!--   "FEATURED BEER" CARD   -->
-        <div class="col s12 m4">
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card">
-                <div id="right-image" class="card-image">
-                  <div id="image-as-link">
-                    <img id="featured-beer-image" class="activator" src="images/small-hops2-298x197.jpg">
+                  <button id="left-item-link" data-target="modal-listbox" class="material-icons btn-floating halfway-fab waves-effect waves-light red">&#x21aa</a>
                   </div>
-                  <span id="featured-beer-name" class="card-title">Pick One for Me</span>
-                  <a id="featured-beer" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">replay</i></a>
-                </div>
-                <div id="featured-beer-data" class="card-content">
-                  <p>Not sure which beer you want to explore? Let us pick one for you. You can click the <replay> icon any time you want to see a new one. </p>
-                </div>
-                <div id="right-card" class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                  <p></p>
+                  <div id="selected-beer-data" class="card-content">
+                    <p>Choose from a list to learn more about a particular amarillo-hopped beer.</p>
+                  </div>
+                  <div id="left-card" class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                  </div>
+                  <div id="modal-listbox" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                      <div class="input-field">
+                        <select id="list-of-beers">
+                          <option value="" disabled selected>Pick a Beer</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <p>text</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <br><br>
-        <div class="section">
 
-          </div>
-        </div>
+          <!--   "ABOUT AMARILLO" CARD(LINK TO PLACEHOLDER PAGE) -->
+          <div class="col s12 m4">
+            <div class="card">
+              <div id="middle-image" class="card-image">
+                <div>
+                  <img id="middle-item-image" class="activator" src="images/small-hops2-298x197.jpg">
+                </div>
+                <span id="middle-item-name" class="card-title">About amarillo</span>
 
-        <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l12 s12">
+                <!-- Modal Trigger -->
+                <button id="middle-item-link" data-target="modal1" class="material-icons btn-floating halfway-fab waves-effect waves-light red">&#x21aa</a>
+                </div>
+                <div class="card-content">
+                  <p> Though not as well-known as the Mosaic or Cascade varietals, Amarillo hops are essential for lending citrusy notes to beer. They are most widely used in pale ales and India pale ales.</p>
+                </div>
+
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>The Amarillo Hop</h4>
+                    <p>8-11% Apha Acids • Domestic • Dual Purpose Hop</p>
+                    <p>Popular American mid-range alpha acid variety with a unique and distinct aroma. It has a flowery, citrus like aroma; more orange than grapefruit.</p>
+                    <p>Used For:  Pale Ales, IPAs, Porters</p>
+                    <p>Aroma:  Specific aroma descriptors include grapefruit, orange, lemon, melon, apricot and peach.</p>
+                    <p>Substitutes:  Cascade, Centennial</p>
+                  </div>
+                  <div class="modal-footer">
+                  </div>
+                </div>
 
               </div>
             </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-              Made with <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-              <span class="grey-text text-lighten-4">  The data for this site is courtesy of breweryDB.</span>
+
+            <!--   "FEATURED BEER" CARD   -->
+            <div class="col s12 m4">
+              <div class="row">
+                <div class="col s12 m12">
+                  <div class="card">
+                    <div id="right-image" class="card-image">
+                      <div id="image-as-link">
+                        <img id="featured-beer-image" class="activator" src="images/small-hops2-298x197.jpg">
+                      </div>
+                      <span id="featured-beer-name" class="card-title">Pick One for Me</span>
+                      <a id="featured-beer" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">replay</i></a>
+                    </div>
+                    <div id="featured-beer-data" class="card-content">
+                      <p>Not sure which beer you want to explore? Let us pick one for you. You can click the <replay> icon any time you want to see a new one. </p>
+                      </div>
+                      <div id="right-card" class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br><br>
+              <div class="section">
+
+              </div>
             </div>
-          </div>
-        </footer>
 
-        <!--  Scripts-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>
+            <footer class="page-footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col l12 s12">
 
-      </body>
-      </html>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="container">
+                  Made with <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                  <span class="grey-text text-lighten-4">  The data for this site is courtesy of breweryDB.</span>
+                </div>
+              </div>
+            </footer>
+
+            <!--  Scripts-->
+            <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script src="js/materialize.js"></script>
+            <script src="js/init.js"></script>
+
+          </body>
+          </html>

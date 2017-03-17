@@ -138,6 +138,7 @@ $('#list-of-beers').on('change', function(e) {
     error: function (error) {
     }
   });
+  $('#modal-listbox').modal('close');
 }); // end of function to generate the selected beer
 
 
