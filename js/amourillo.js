@@ -130,10 +130,10 @@ $('#list-of-beers').on('change', function(e) {
 
       $('.activator').on('click', function(e) {
         if (thisDescription) {
-          $(".card-reveal p").html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
+          $("#left-card p").html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
         }
         else {
-          $(".card-reveal p").html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
+          $("#left-card p").html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
         }
       });
     },
@@ -209,10 +209,10 @@ $('#featured-beer').on('click', function(e) {
       // update the information that will show upon card-reveal
       $('.activator').on('click', function(e) {
         if (thisDescription) {
-          $(".card-reveal p").html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
+          $("#right-card p").html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
         }
         else {
-          $(".card-reveal p").html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
+          $("#right-card p").html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
         }
       });
     },
