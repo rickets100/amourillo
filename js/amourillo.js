@@ -221,3 +221,8 @@ $('#featured-beer').on('click', function(e) {
     }
   });
 }); // end of function to generate a new featured beer
+
+$("#modal1").on('click', function(e) {
+  $('#modal1').modal('close');
+
+});
