@@ -417,19 +417,6 @@ breweryCountry: 'USA',
 otherHops: ''
 },
 {
-brewer: 'Kern River Brewing Company',
-beerName: 'Just Outstanding IPA',
-beerId: 'Uo3q4P',
-beerType: 'IPA',
-beerAbv: '',
-beerIbu: '',
-beerDescription: '',
-breweryCity: '',
-breweryState: '',
-breweryCountry: '',
-otherHops: ''
-},
-{
 brewer: 'Mikkeller',
 beerName: 'Single Hop Amarillo IPA',
 beerId: 'dRqYP3',
@@ -533,19 +520,6 @@ breweryCountry: '',
 breweryCountry: 'USA',
 beerDescription: '',
 otherHops: ''
-},
-{
-brewer: 'Ale Asylum',
-beerName: 'Ballistic IPA',
-beerId: 'MOaHtz',
-beerType: 'IPA',
-beerAbv: '',
-beerIbu: '',
-breweryCity: '',
-breweryState: '',
-breweryCountry: 'USA',
-beerDescription: '',
-otherHops: 'None'
 },
 {
 brewer: 'Yazoo Brewing Company',

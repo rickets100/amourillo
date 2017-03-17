@@ -49,7 +49,9 @@ function createListOfBeers() {
   for (var i = 0; i < beerNameArrayPlain.length; i++) {
     var beer = beerNameArrayPlain[i];
     var beerHyphenated = beer.replace(/\s+/g, '-').toLowerCase();
-    $('#list-of-beers').append("<option value='" + beer + "'>" + beer + "</option>");
+
+    $('#list-of-beers').append("<option value='" + beer + "' id=" + beerInfo[i].beerId + ">" + beer + "</option>");
+    console.log('add this ', ("<option value='" + beer + "' id=" + beerInfo[i].beerId + ">" + beer + "</option>"));
   }
 };
 
