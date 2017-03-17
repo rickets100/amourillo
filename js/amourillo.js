@@ -49,10 +49,11 @@ for (let i = 0; i <beerInfo.length; i++) {
 beerNameArrayPlain.sort();
 function createListOfBeers() {
   for (var i = 0; i < beerNameArrayPlain.length; i++) {
-    var beer = (beerNameArrayPlain[i] + ' - ' + brewerNameArrayPlain[i]);
+    var beer = beerNameArrayPlain[i];
+    var beerFull = (beerNameArrayPlain[i] + ' - ' + brewerNameArrayPlain[i]);
     var beerHyphenated = beer.replace(/\s+/g, '-').toLowerCase();
 
-    $('#list-of-beers').append("<option value='" + beer + "' id=" + beerInfo[i].beerId + ">" + beer + "</option>");
+    $('#list-of-beers').append("<option value='" + beer + "' id=" + beerInfo[i].beerId + ">" + beerFull + "</option>");
   }
 };
 
@@ -72,6 +73,7 @@ $('#list-of-beers').on('change', function(e) {
 
   // GET THE KEY FOR THE SELECTED ITEM (FROM LOCAL DATA STRUCTURE)
   for (let i = 0; i<beerInfo.length; i++) {
+
     if (beerInfo[i].beerName === selectedBeer) {
       beerId = `\&beerId\=${beerInfo[i].beerId}`;
       console.log('beerId', beerId);
@@ -79,6 +81,7 @@ $('#list-of-beers').on('change', function(e) {
   }
   console.log('key is ', $('#list-of-beers').val());
   let beerIdQuery = `${proxy}${beerApi}${apiKey}${beerId}${params}`;
+  console.log('query string', beerIdQuery);
 
   $.ajax ({
     method: 'GET',
