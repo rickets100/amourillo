@@ -118,9 +118,11 @@ $('#list-of-beers').on('change', function(e) {
       // update the image
       if (results.data.labels) {
         $("#selected-beer-image").attr("src", results.data.labels.medium);
+        $('#left-image').addClass("hoverable");
       }
       else {
         $("#selected-beer-image").attr("src", 'images/pint-glass-with-boca-cropped-525x350.png');
+        $('#left-image').addClass("hoverable");
       }
 
       // UPDATE THE INFORMATION THAT WILL SHOW UPON CARD REVEAL
@@ -193,9 +195,12 @@ $('#featured-beer').on('click', function(e) {
       // update the image
       if (results.data.labels) {
         $("#featured-beer-image").attr("src", results.data.labels.medium);
+        $('#right-image').addClass("hoverable");
+
       }
       else {
         $("#featured-beer-image").attr("src", 'images/pint-glass-with-boca-cropped-525x350.png');
+        $('#right-image').addClass("hoverable");
       }
 
       // update the information that will show upon card-reveal
