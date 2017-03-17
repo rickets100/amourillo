@@ -13,13 +13,14 @@ $.get
 
 $(document).ready(function() {
   $('select').material_select();
+  $('.modal').modal();
 });
 
 // GLOBAL VARIABLES
 var objectForGets = {};
 var beerNameArrayPlain = [];
 var brewerNameArray = [];
-var brewerNamerArrayPlain = [];
+var brewerNameArrayPlain = [];
 var beerNameQuery = '';
 var brewerNameQuery = '';
 var beerIdArray = [];
@@ -41,17 +42,17 @@ function createObjectForGets() {
 for (let i = 0; i <beerInfo.length; i++) {
   objectForGets.beerName = beerInfo[i].beerName;
   beerNameArrayPlain[i] = beerInfo[i].beerName;
+  brewerNameArrayPlain[i] = beerInfo[i].brewer;
 };
 
 // SORT THE LIST OF ITEMS FOR THE LISTBOX, THEN GENERATE HTML
 beerNameArrayPlain.sort();
 function createListOfBeers() {
   for (var i = 0; i < beerNameArrayPlain.length; i++) {
-    var beer = beerNameArrayPlain[i];
+    var beer = (beerNameArrayPlain[i] + ' - ' + brewerNameArrayPlain[i]);
     var beerHyphenated = beer.replace(/\s+/g, '-').toLowerCase();
 
     $('#list-of-beers').append("<option value='" + beer + "' id=" + beerInfo[i].beerId + ">" + beer + "</option>");
-    console.log('add this ', ("<option value='" + beer + "' id=" + beerInfo[i].beerId + ">" + beer + "</option>"));
   }
 };
 
@@ -68,15 +69,16 @@ $('#list-of-beers').on('change', function(e) {
   let params = '\&withBreweries=Y';
   let beerId;
 
+
   // GET THE KEY FOR THE SELECTED ITEM (FROM LOCAL DATA STRUCTURE)
   for (let i = 0; i<beerInfo.length; i++) {
     if (beerInfo[i].beerName === selectedBeer) {
       beerId = `\&beerId\=${beerInfo[i].beerId}`;
+      console.log('beerId', beerId);
     }
   }
-
+  console.log('key is ', $('#list-of-beers').val());
   let beerIdQuery = `${proxy}${beerApi}${apiKey}${beerId}${params}`;
-  console.log(beerIdQuery);
 
   $.ajax ({
     method: 'GET',
@@ -91,7 +93,6 @@ $('#list-of-beers').on('change', function(e) {
       var thisIbu = results.data.ibu;
       var thisDescription = results.data.description;
       var backupDescription = results.data.style.description;
-      console.log(results);
 
       // update the placeholder paragraph
       if (thisAbv) {
@@ -120,7 +121,6 @@ $('#list-of-beers').on('change', function(e) {
 
       // update the image
       if (results.data.labels) {
-        console.log('labels ', results.data.labels);
         $("#selected-beer-image").attr("src", results.data.labels.medium);
       }
       else {
@@ -200,7 +200,6 @@ $('#featured-beer').on('click', function(e) {
 
       // update the image
       if (results.data.labels) {
-        console.log('labels ', results.data.labels);
         $("#featured-beer-image").attr("src", results.data.labels.medium);
       }
       else {
