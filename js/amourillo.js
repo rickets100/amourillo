@@ -1,14 +1,10 @@
 /* API Key: ' 432671cad45a2c4cd0b97ddf1fe4adb0
 http://api.brewerydb.com/v2/?apikey=432671cad45a2c4cd0b97ddf1fe4adb0/brewery/KR4X6i
 
-EXAMPLE OF SYNTAX:
+EXAMPLES OF SYNTAX:
 http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=juniper%20Pale%20Ale
 
 'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=amarillo%20Pale%20Ale'
-
-syntax for the get
-jQuery.get( url [, data ] [, success ] [, dataType ] )
-$.get
 */
 
 $(document).ready(function() {
@@ -76,12 +72,9 @@ $('#list-of-beers').on('change', function(e) {
 
     if (beerInfo[i].beerName === selectedBeer) {
       beerId = `\&beerId\=${beerInfo[i].beerId}`;
-      console.log('beerId', beerId);
     }
   }
-  console.log('key is ', $('#list-of-beers').val());
   let beerIdQuery = `${proxy}${beerApi}${apiKey}${beerId}${params}`;
-  console.log('query string', beerIdQuery);
 
   $.ajax ({
     method: 'GET',
@@ -131,8 +124,6 @@ $('#list-of-beers').on('change', function(e) {
       }
 
       // UPDATE THE INFORMATION THAT WILL SHOW UPON CARD REVEAL
-      console.log(beerIdQuery);
-
       $('.activator').on('click', function(e) {
         if (thisDescription) {
           $("#left-card p").html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
@@ -146,7 +137,6 @@ $('#list-of-beers').on('change', function(e) {
     }
   });
 }); // end of function to generate the selected beer
-
 
 
 // GENERATE A NEW FEATURED BEER WHEN THE REPLAY BUTTON IS CLICKED
@@ -174,7 +164,6 @@ $('#featured-beer').on('click', function(e) {
       var thisIbu = results.data.ibu;
       var thisDescription = results.data.description;
       var backupDescription = results.data.style.description;
-      console.log(results);
 
       // update the placeholder paragraph
       if (thisAbv) {
@@ -209,7 +198,6 @@ $('#featured-beer').on('click', function(e) {
         $("#featured-beer-image").attr("src", 'images/pint-glass-with-boca-cropped-525x350.png');
       }
 
-      console.log(beerIdQuery);
       // update the information that will show upon card-reveal
       $('.activator').on('click', function(e) {
         if (thisDescription) {
