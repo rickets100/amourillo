@@ -80,7 +80,7 @@ $('#list-of-beers').on('change', function(e) {
     method: 'GET',
     url: beerIdQuery,
     beforeSend: function(xhr) {
-      xhr.setRequestHeader( 'Access-Control-Allow-Headers', '*' );
+      xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
     },
     success: function(results) {
       var thisName = results.data.name;
