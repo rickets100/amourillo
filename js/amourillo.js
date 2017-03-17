@@ -114,7 +114,7 @@ $('#list-of-beers').on('change', function(e) {
       };
 
       // update the image label
-      $("#featured-beer-name").remove();
+      $("#selected-beer-name").remove();
 
       // update the image
       if (results.data.labels) {
