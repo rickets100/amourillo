@@ -24,7 +24,7 @@ var beerIdArrayPlain = [];
 
 // ++GENERATE NAMES FOR THE LISTBOX/SELECTBOX
 function createListBoxItems (object) {
-  var listItem = '';
+  let listBoxArray = [];
 
   $.each(beerInfo, function(key, value) {
     let beer = beerInfo[key].beerName;
@@ -32,18 +32,20 @@ function createListBoxItems (object) {
     let id = beerInfo[key].beerId;
     let nameAsDisplayed = beer + ' - ' + brewer;
     let listBoxHtml = "<option value='" + beer + "' id=" + id + ">" + nameAsDisplayed + "</option>";
-
-    console.log('listBoxHtml', listBoxHtml);
-    $('#list-of-beers').append(listBoxHtml);
+    listBoxArray.push(listBoxHtml);
   });
-  return listItem;
+
+  listBoxArray.sort();
+  $.each(listBoxArray, function(key, value) {
+    $('#list-of-beers').append(listBoxArray[key]);
+  });
+  console.log(listBoxArray);
 };
 
 // ++PULL THE ID FOR THE SELECTED ITEM
 function getIdFromListBox() {
   var selectedBeerId = $(this).children(":selected").attr("id");
-  console.log(selectedBeerId);
-
+  // console.log(selectedBeerId);
 }
 
 // PULL DATA FROM THE LOCAL DATA FILE

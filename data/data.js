@@ -418,6 +418,20 @@ breweryCountry: '',
 otherHops: ['None']
 },
 {
+brewer: 'Harpoon Brewery',
+beerName: 'Leviathan Imperial IPA',
+beerId: 'Bibi0g',
+beerType: 'Imperial or Double India Pale Ale',
+beerAbv: '',
+beerIbu: '',
+beerDescription: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Centennial', 'Chinook', 'Simcoe']
+},
+{
 brewer: 'Brouwerij De Molen',
 beerName: 'Amarillo',
 beerId: 'PiDWBZ',
@@ -523,6 +537,19 @@ beerDescription: '',
 otherHops: ['Perle, Cascade']
 },
 {
+brewer: 'SweetWater Brewing Company',
+beerName: 'Hash Session IPA',
+beerId: 'JKdiyv',
+beerType: 'Session India Pale Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: 'USA',
+beerDescription: '',
+otherHops: ['Bravo']
+},
+{
 brewer: 'Smuttynose Brewing Company',
 beerName: 'Finestkind IPA',
 beerId: '3RFxH6',
@@ -533,7 +560,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: 'USA',
 beerDescription: '',
-otherHops: ['Simcoe, Santiams']
+otherHops: ['Simcoe', 'Santiams']
 },
 {
 brewer: 'Central City Brewing Company',
