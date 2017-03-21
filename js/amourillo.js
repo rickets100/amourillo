@@ -2,9 +2,9 @@
 http://api.brewerydb.com/v2/?apikey=432671cad45a2c4cd0b97ddf1fe4adb0/brewery/KR4X6i
 
 EXAMPLES OF SYNTAX:
-http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=juniper%20Pale%20Ale
+https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=juniper%20Pale%20Ale
 
-'https://crossorigin.me/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=amarillo%20Pale%20Ale'
+'https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=amarillo%20Pale%20Ale'
 */
 
 $(document).ready(function() {
@@ -22,6 +22,29 @@ var brewerNameQuery = '';
 var beerIdArray = [];
 var beerIdArrayPlain = [];
 
+// ++GENERATE NAMES FOR THE LISTBOX/SELECTBOX
+function createListBoxItems (object) {
+  var listItem = '';
+
+  $.each(beerInfo, function(key, value) {
+    let beer = beerInfo[key].beerName;
+    let brewer = beerInfo[key].brewer;
+    let id = beerInfo[key].beerId;
+    let nameAsDisplayed = beer + ' - ' + brewer;
+    let listBoxHtml = "<option value='" + beer + "' id=" + id + ">" + nameAsDisplayed + "</option>";
+
+    console.log('listBoxHtml', listBoxHtml);
+    $('#list-of-beers').append(listBoxHtml);
+  });
+  return listItem;
+};
+
+// ++PULL THE ID FOR THE SELECTED ITEM
+function getIdFromListBox() {
+  var selectedBeerId = $(this).children(":selected").attr("id");
+  console.log(selectedBeerId);
+
+}
 
 // PULL DATA FROM THE LOCAL DATA FILE
 // Note: beerInfo is the array of objects stored in data.js. My plan is to be able to replace it with data pulled from a database when we reach that part of the course - as a way to help myself practice
@@ -34,46 +57,19 @@ function createObjectForGets() {
   };
 };
 
-// CREATE THE ARRAY FOR THE LISTBOX
-for (let i = 0; i <beerInfo.length; i++) {
-  objectForGets.beerName = beerInfo[i].beerName;
-  beerNameArrayPlain[i] = beerInfo[i].beerName;
-  brewerNameArrayPlain[i] = beerInfo[i].brewer;
-};
-
-// SORT THE LIST OF ITEMS FOR THE LISTBOX, THEN GENERATE HTML
-beerNameArrayPlain.sort();
-function createListOfBeers() {
-  for (var i = 0; i < beerNameArrayPlain.length; i++) {
-    var beer = beerNameArrayPlain[i];
-    var beerFull = (beerNameArrayPlain[i] + ' - ' + brewerNameArrayPlain[i]);
-    var beerHyphenated = beer.replace(/\s+/g, '-').toLowerCase();
-
-    $('#list-of-beers').append("<option value='" + beer + "' id=" + beerInfo[i].beerId + ">" + beerFull + "</option>");
-  }
-};
-
 createObjectForGets();
-createListOfBeers();
+createListBoxItems(beerInfo);
 
 // DISPLAY THE CHOSEN BEER'S INFO WHEN CHOSEN IN THE SELECT BOX
 $('#list-of-beers').on('change', function(e) {
-  let selectedBeer = $('#list-of-beers').val();
-  let crossorigin = 'https://crossorigin.me/';
+  let selectedBeerId = $(this).children(":selected").attr("id");
+  let beerId = `\&beerId\=${selectedBeerId}`
   let proxy = 'https://galvanize-cors-proxy.herokuapp.com/';
   let beerApi = 'https://api.brewerydb.com/v2/beers/';
   let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
   let params = '\&withBreweries=Y';
-  let beerId;
-
 
   // GET THE KEY FOR THE SELECTED ITEM (FROM LOCAL DATA STRUCTURE)
-  for (let i = 0; i<beerInfo.length; i++) {
-
-    if (beerInfo[i].beerName === selectedBeer) {
-      beerId = `\&beerId\=${beerInfo[i].beerId}`;
-    }
-  }
   let beerIdQuery = `${proxy}${beerApi}${apiKey}${beerId}${params}`;
 
   $.ajax ({

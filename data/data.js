@@ -11,20 +11,8 @@ breweryCity: 'Munster',
 breweryState: 'IN',
 breweryCountry: 'USA',
 beerDescription: 'American Wheat Beer, single-hopped with Amarillo hops. Crisp and fruity with notes of orange and grapefruit.',
-otherHops: 'None'
+otherHops: ['None']
 },
-// {
-// brewer: 'Block 15',
-// beerName: 'Pint Master\’s Pale Ale',
-// beerType: 'American Pale Ale',
-// beerAbv: '5.5',
-// beerIbu: '34',
-// breweryCity: 'Corvallis',
-// breweryState: 'OR',
-// breweryCountry: 'USA',
-// beerDescription: 'American Pale Ale brewed with 100 Amarillo hops.',
-// otherHops: 'None'
-// },
 {
 brewer: 'Three Floyds Brewing Company',
 beerName: 'Brian Boru',
@@ -36,7 +24,7 @@ breweryCity: 'Munster',
 breweryState: 'IN',
 breweryCountry: 'USA',
 beerDescription: 'Irish Style Red Ale which features Amarillo hops for flavoring.',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Green Flash',
@@ -49,7 +37,7 @@ breweryCity: 'San Diego',
 breweryState: 'CA',
 breweryCountry: 'USA',
 beerDescription: 'Ruby colored IPA which uses Amarillo for flavoring and is dry-hopped with Amarillo. Nice  example of the aroma character that Amarillo hops produce.',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Lagunitas Brewing Company',
@@ -62,7 +50,7 @@ breweryCity: 'Petaluma',
 breweryState: 'CA',
 breweryCountry: 'USA',
 beerDescription: 'Imperial Red Ale which features Amarillo hops for flavoring and aroma.',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Dogfish Head Craft Brewery',
@@ -75,7 +63,7 @@ beerDescription: 'Apricot flavored IPA dry-hopped with Amarillo hops. Nice blend
 breweryCity: 'Milton',
 breweryState: 'DE',
 breweryCountry: 'USA',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Kern River',
@@ -88,7 +76,7 @@ beerDescription: 'IPA dry-hopped with a combo of Amarillo and Simcoe hops. Citru
 breweryCity: 'Kernville',
 breweryState: 'CA',
 breweryCountry: 'USA',
-otherHops: 'Simcoe'
+otherHops: ['Simcoe']
 },
 {
 brewer: 'Alpine Beer',
@@ -101,7 +89,7 @@ beerDescription: 'IPA brewed with two hops; Simcoe and Amarillo. Nice example of
 breweryCity: 'Alpine',
 breweryState: 'CA',
 breweryCountry: 'USA',
-otherHops: 'Simcoe'
+otherHops: ['Simcoe']
 },
 {
 brewer: 'Hangar 24 Craft Brewery',
@@ -114,7 +102,7 @@ beerDescription: 'American Pale Ale that is dry-hopped with Amarillo hops. Orang
 breweryCity: 'Redlands',
 breweryState: 'CA',
 breweryCountry: 'USA',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Ale Asylum',
@@ -127,7 +115,7 @@ beerDescription: 'American IPA which uses Amarillo for flavoring and aroma.',
 breweryCity: 'Madison',
 breweryState: 'WI',
 breweryCountry: 'USA',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Revolution Brewing',
@@ -140,7 +128,7 @@ beerDescription: 'American Stout which uses a combination of Amarillo with Chino
 breweryCity: 'Chicago',
 breweryState: 'IL',
 breweryCountry: 'USA',
-otherHops: 'Chinook'
+otherHops: ['Chinook']
 },
 {
 brewer: 'Ninkasi',
@@ -153,7 +141,7 @@ beerDescription: 'Fresh-Hopped IPA which uses newly harvested Amarillo and Cryst
 breweryCity: 'Eugene',
 breweryState: 'OR',
 breweryCountry: 'USA',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Heretic Brewing Company',
@@ -163,11 +151,11 @@ beerType: 'Belgian Pale Ale',
 beerAbv: '4.8',
 beerIbu: '26',
 beerDescription: 'Belgian Pale Ale dry-hopped with a combo of Amarillo and Sorachi Ace. Aromas of orange and lemon citrus.',
-otherHops: '',
+otherHops: [],
 breweryCity: 'Fairfield',
 breweryState: 'CA',
 breweryCountry: 'USA',
-otherHops: 'Sorachi'
+otherHops: ['Sorachi']
 },
 {
 brewer: 'Rogue',
@@ -180,7 +168,7 @@ beerDescription: 'American Pale Ale flavored with juniper berries, Amarillo hops
 breweryCity: 'Newport',
 breweryState: 'OR',
 breweryCountry: 'USA',
-otherHops: 'Styrian Golding'
+otherHops: ['Styrian Golding']
 },
 {
 brewer: 'Ithaca',
@@ -193,7 +181,7 @@ beerDescription: 'India Red Ale dry-hopped and flavored with a combination of Am
 breweryCity: 'Ithaca',
 breweryState: 'NY',
 breweryCountry: 'USA',
-otherHops: 'Cascade',
+otherHops: ['Cascade']
 },
 {
 brewer: 'Fremont',
@@ -206,7 +194,7 @@ beerDescription: 'Golden Ale brewed with 100 Amarillo hops. Floral aromas of cit
 breweryCity: 'Seattle',
 breweryState: 'WA',
 breweryCountry: 'USA',
-otherHops: 'None'
+otherHops: ['None']
 },
 {
 brewer: 'Terrapin',
@@ -219,7 +207,7 @@ breweryCity: 'Athens',
 breweryState: 'GA',
 breweryCountry: 'USA',
 beerDescription: 'American Rye Ale dry-hopped with Amarillo hops. Aroma blend of orange citrus and rye malt.',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Excel Brewing Company',
@@ -232,7 +220,7 @@ breweryCity: 'Breese',
 breweryState: 'IL',
 breweryCountry: 'USA',
 beerDescription: '',
-otherHops: 'None'
+otherHops: ['None']
 },
 {
 brewer: 'Maumee Bay',
@@ -245,7 +233,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: 'Columbus, Centennial, Simcoe'
+otherHops: ['Columbus, Centennial, Simcoe']
 },
 {
 brewer: 'Dogfish Head',
@@ -258,7 +246,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Knee Deep Brewing Company',
@@ -271,7 +259,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Collective Arts Brewing',
@@ -284,7 +272,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Wiper and True',
@@ -297,7 +285,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'New Belgium',
@@ -310,7 +298,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: 'Cascade'
+otherHops: ['Cascade']
 },
 {
 brewer: 'Brewdog',
@@ -323,7 +311,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Grand Junction Brewing Co.',
@@ -336,7 +324,7 @@ beerDescription: '',
 breweryCity: '',
 breweryState: '',
 breweryCountry: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Blue Point Brewing',
@@ -349,7 +337,7 @@ beerDescription: '',
 breweryCity: '',
 breweryState: '',
 breweryCountry: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'No-Li Brewhouse',
@@ -362,7 +350,7 @@ beerDescription: '',
 breweryCity: '',
 breweryState: '',
 breweryCountry: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Rogue Ales',
@@ -375,7 +363,7 @@ beerDescription: '',
 breweryCity: '',
 breweryState: '',
 breweryCountry: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Hop Stuff Brewery',
@@ -388,7 +376,7 @@ beerDescription: '',
 breweryCity: '',
 breweryState: '',
 breweryCountry: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Victory Art Brew',
@@ -401,7 +389,7 @@ beerDescription: '',
 breweryCity: '',
 breweryState: '',
 breweryCountry: 'USA',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'New Republic Brewing Company',
@@ -414,7 +402,7 @@ beerDescription: '',
 breweryCity: '',
 breweryState: '',
 breweryCountry: 'USA',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Mikkeller',
@@ -427,7 +415,7 @@ beerDescription: '',
 breweryCity: '',
 breweryState: '',
 breweryCountry: '',
-otherHops: 'None'
+otherHops: ['None']
 },
 {
 brewer: 'Brouwerij De Molen',
@@ -441,7 +429,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Fremont Brewing Company',
@@ -453,7 +441,7 @@ beerIbu: '',
 beerDescription: '',
 breweryState: 'WA',
 breweryCountry: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Wild Beer Co.',
@@ -466,7 +454,7 @@ beerDescription: '',
 breweryCity: 'Evercreech',
 breweryState: 'Somerset',
 breweryCountry: 'England',
-otherHops: 'Mosaic'
+otherHops: ['Mosaic']
 },
 {
 brewer: 'Wilmington Brewing Company',
@@ -479,7 +467,7 @@ beerDescription: '',
 breweryCity: '',
 breweryState: '',
 breweryCountry: 'USA',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Goose Island Beer Company',
@@ -492,7 +480,7 @@ breweryCity: 'Chicago',
 breweryState: 'Illinois',
 breweryCountry: 'USA',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Switchback',
@@ -505,7 +493,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: 'USA',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Trillium Brewing',
@@ -519,7 +507,7 @@ breweryState: '',
 breweryCountry: '',
 breweryCountry: 'USA',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Yazoo Brewing Company',
@@ -532,7 +520,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: 'USA',
 beerDescription: '',
-otherHops: 'Perle, Cascade'
+otherHops: ['Perle, Cascade']
 },
 {
 brewer: 'Smuttynose Brewing Company',
@@ -545,7 +533,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: 'USA',
 beerDescription: '',
-otherHops: 'Simcoe, Santiams'
+otherHops: ['Simcoe, Santiams']
 },
 {
 brewer: 'Central City Brewing Company',
@@ -558,7 +546,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Little Mountain Brewing Company',
@@ -571,7 +559,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Taos Mesa Brewing',
@@ -584,7 +572,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: '4 Pines Brewing Company',
@@ -597,7 +585,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: 'Cascade, Citra'
+otherHops: ['Cascade, Citra']
 },
 {
 brewer: 'Stone Brewing Co.',
@@ -610,7 +598,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Magic Hat Brewing Company',
@@ -623,7 +611,85 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
+},
+{
+brewer: 'Deschutes Brewery',
+beerName: 'Hop Slice',
+beerId: 'ifFkDZ',
+beerType: 'Session India Pale Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Azacca', 'Cascade', 'Centennial', 'Galaxy']
+},
+{
+brewer: 'Yards Brewing Company',
+beerName: 'India Pale Ale (IPA)',
+beerId: 'Tx6gof',
+beerType: 'American-Style India Pale Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Chinook']
+},
+{
+brewer: 'Brooklyn Brewery',
+beerName: 'American Ale',
+beerId: 'Vc5hQf',
+beerType: 'American-Style Pale Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Cascade', 'Willamette']
+},
+{
+brewer: 'Brooklyn Brewery',
+beerName: 'Defender IPA',
+beerId: '46DjNi',
+beerType: 'Imperial Red Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Cascade', 'Mosaic', 'Pilgrim', 'Willamette']
+},
+{
+brewer: 'Brooklyn Brewery',
+beerName: 'Brooklyn East India Pale Ale',
+beerId: 'Wrh3tC',
+beerType: 'American-Style India Pale Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Cascade', 'Celeia', 'Centennial', 'East Kent', 'Golding', 'Summit']
+},
+{
+brewer: 'Yards Brewing Company',
+beerName: 'Golden Hop IPA',
+beerId: 'qKD35I',
+beerType: 'American-Style India Pale Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Cascade', 'Mosaic']
 },
 {
 brewer: 'Boulevard Brewing Company',
@@ -636,7 +702,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Flying Dog Brewery',
@@ -649,7 +715,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Crooked Ladder Brewery',
@@ -662,7 +728,7 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 },
 {
 brewer: 'Alpha Brewing Co',
@@ -675,7 +741,85 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
+},
+{
+brewer: 'Elysian Brewing Company',
+beerName: 'The Immortal IPA',
+beerId: '7GcTwR',
+beerType: 'IPA',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Centennial', 'Chinnok']
+},
+{
+brewer: 'Hales Ales Brewery and Pub',
+beerName: 'Supergoose IPA',
+beerId: 'gOWSxd',
+beerType: 'American-Style India Pale Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Centennial', 'Simcoe']
+},
+{
+brewer: 'Elysian Brewing Company',
+beerName: 'Elysian Fields Pale Ale',
+beerId: 'RUg90U',
+beerType: 'Pale Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Simcoe']
+},
+{
+brewer: 'Elysian Brewing Company',
+beerName: 'Avatar Jasmine IPA',
+beerId: 'CrEWhc',
+beerType: 'American-Style IPA',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Glacier', 'Northern Brewer']
+},
+{
+brewer: 'Elysian Brewing Company',
+beerName: 'Space Dust',
+beerId: 'c58p4w',
+beerType: 'IPA',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Chinook', 'Citra']
+},
+{
+brewer: 'Hales Ales Brewery and Pub',
+beerName: 'Pale American Ale',
+beerId: 'CA3UzH',
+beerType: 'American-Style Pale Ale',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Bravo', 'Cascade', 'Centennial', 'Citra']
 },
 {
 brewer: 'Persephone Brewing Company',
@@ -688,8 +832,59 @@ breweryCity: '',
 breweryState: '',
 breweryCountry: '',
 beerDescription: '',
-otherHops: ''
+otherHops: []
 }];
+// {
+// brewer: 'Hales Ales Brewery and Pub',
+// beerName: 'Superjuice',
+// beerId: '',
+// beerType: '',
+// beerAbv: '',
+// beerIbu: '',
+// breweryCity: '',
+// breweryState: '',
+// breweryCountry: '',
+// beerDescription: '',
+// otherHops: ['Centennial', 'Simcoe']
+// },
+// {
+// brewer: 'Stone Brewing Co.',
+// beerName: 'American Stout',
+// beerId: '';
+// beerType: 'stout',
+// beerAbv: '',
+// beerIbu: '',
+// breweryCity: '',
+// breweryState: '',
+// breweryCountry: '',
+// beerDescription: '',
+// otherHops: ['Columbus, Chinook, Cascade']
+// },
+// {
+// brewer: 'Stone Brewing Co.',
+// beerName: '16th Anniversary IPA',
+// beerId: FCj67Q,
+// beerType: 'IPA',
+// beerAbv: '',
+// beerIbu: '',
+// breweryCity: '',
+// breweryState: '',
+// breweryCountry: '',
+// beerDescription: '',
+// otherHops: ['Calypso']
+// },
+// {
+// brewer: 'Block 15',
+// beerName: 'Pint Master\’s Pale Ale',
+// beerType: 'American Pale Ale',
+// beerAbv: '5.5',
+// beerIbu: '34',
+// breweryCity: 'Corvallis',
+// breweryState: 'OR',
+// breweryCountry: 'USA',
+// beerDescription: 'American Pale Ale brewed with 100 Amarillo hops.',
+// otherHops: ['None']
+// },
 
 // BLANK OBJECT FOR COPYING/PASTING
 // {
