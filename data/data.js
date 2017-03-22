@@ -379,6 +379,32 @@ breweryCountry: '',
 otherHops: []
 },
 {
+brewer: 'Avery Brewing Company',
+beerName: 'The Maharaja',
+beerId: 'QG6D7D',
+beerType: 'Imperial or Double India Pale Ale',
+beerAbv: '',
+beerIbu: '',
+beerDescription: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: 'USA',
+otherHops: ['Centennial', 'Chinook', 'Columbus', 'Simcoe']
+},
+{
+brewer: 'Harpoon',
+beerName: 'Take 5',
+beerId: 'K0sSsS',
+beerType: 'Session Beer',
+beerAbv: '',
+beerIbu: '',
+beerDescription: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: 'USA',
+otherHops: ['Simcoe']
+},
+{
 brewer: 'Victory Art Brew',
 beerName: 'Black Sails IPA',
 beerId: 'GxxKWe',

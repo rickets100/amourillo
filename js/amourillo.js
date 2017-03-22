@@ -14,13 +14,7 @@ $(document).ready(function() {
 
 // GLOBAL VARIABLES
 var objectForGets = {};
-var beerNameArrayPlain = [];
-var brewerNameArray = [];
-var brewerNameArrayPlain = [];
-var beerNameQuery = '';
-var brewerNameQuery = '';
 var beerIdArray = [];
-var beerIdArrayPlain = [];
 
 // ++GENERATE NAMES FOR THE LISTBOX/SELECTBOX
 function createListBoxItems (object) {
@@ -31,21 +25,21 @@ function createListBoxItems (object) {
     let brewer = beerInfo[key].brewer;
     let id = beerInfo[key].beerId;
     let nameAsDisplayed = beer + ' - ' + brewer;
-    let listBoxHtml = "<option value='" + beer + "' id=" + id + ">" + nameAsDisplayed + "</option>";
+    let listBoxHtml = '<option value="' + beer + '" id=' + id + '>' + nameAsDisplayed + '</option>';
     listBoxArray.push(listBoxHtml);
   });
+
 
   listBoxArray.sort();
   $.each(listBoxArray, function(key, value) {
     $('#list-of-beers').append(listBoxArray[key]);
   });
-  console.log(listBoxArray);
 };
 
 // ++PULL THE ID FOR THE SELECTED ITEM
 function getIdFromListBox() {
-  var selectedBeerId = $(this).children(":selected").attr("id");
-  // console.log(selectedBeerId);
+  var selectedBeerId = $(this).children(':selected').attr('id');
+  console.log(selectedBeerId);
 }
 
 // PULL DATA FROM THE LOCAL DATA FILE
@@ -62,16 +56,16 @@ function createObjectForGets() {
 createObjectForGets();
 createListBoxItems(beerInfo);
 
-// DISPLAY THE CHOSEN BEER'S INFO WHEN CHOSEN IN THE SELECT BOX
+// FUNCTION TO DISPLAY THE CHOSEN BEER'S INFO WHEN CHOSEN IN THE SELECT BOX
 $('#list-of-beers').on('change', function(e) {
-  let selectedBeerId = $(this).children(":selected").attr("id");
-  let beerId = `\&beerId\=${selectedBeerId}`
   let proxy = 'https://galvanize-cors-proxy.herokuapp.com/';
   let beerApi = 'https://api.brewerydb.com/v2/beers/';
   let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
+  let selectedBeerId = $(this).children(':selected').attr('id');
+  let beerId = `\&beerId\=${selectedBeerId}`
   let params = '\&withBreweries=Y';
 
-  // GET THE KEY FOR THE SELECTED ITEM (FROM LOCAL DATA STRUCTURE)
+  // FORMULATE THE QUERY
   let beerIdQuery = `${proxy}${beerApi}${apiKey}${beerId}${params}`;
 
   $.ajax ({
@@ -88,48 +82,48 @@ $('#list-of-beers').on('change', function(e) {
       var thisDescription = results.data.description;
       var backupDescription = results.data.style.description;
 
-      // update the placeholder paragraph
+      // UPDATE THE PLACEHOLDER PARAGRAPH
       if (thisAbv) {
         if (thisIbu) {
           // all 4 things get displayed
-          $("#selected-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>` + `<p>IBU: ${thisIbu}</p>`);
+          $('#selected-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>` + `<p>IBU: ${thisIbu}</p>`);
         }
         else {
           // beer name, brewery & Abv get displayed
-          $("#selected-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>`);
+          $('#selected-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>`);
         };
       }
       else {
         if (thisIbu) {
           // beer name, brewery and Ibu get displayed
-          $("#selected-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>IBU: ${thisIbu}</p>`);
+          $('#selected-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>IBU: ${thisIbu}</p>`);
         }
         else {
           // only beer name and brewery get displayed
-          $("#selected-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>`);
+          $('#selected-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>`);
         };
       };
 
-      // update the image label
-      $("#selected-beer-name").remove();
+      // UPDATE THE IMAGE LABEL
+      $('#selected-beer-name').remove();
 
-      // update the image
+      // UPDATE THE IMAGE
       if (results.data.labels) {
-        $("#selected-beer-image").attr("src", results.data.labels.medium);
-        $('#left-image').addClass("hoverable");
+        $('#selected-beer-image').attr('src', results.data.labels.medium);
+        $('#left-image').addClass('hoverable');
       }
       else {
-        $("#selected-beer-image").attr("src", 'images/pint-glass-with-boca-cropped-525x350.png');
-        $('#left-image').addClass("hoverable");
+        $('#selected-beer-image').attr('src', 'images/pint-glass-with-boca-cropped-525x350.png');
+        $('#left-image').addClass('hoverable');
       }
 
       // UPDATE THE INFORMATION THAT WILL SHOW UPON CARD REVEAL
       $('.activator').on('click', function(e) {
         if (thisDescription) {
-          $("#left-card p").html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
+          $('#left-card p').html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
         }
         else {
-          $("#left-card p").html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
+          $('#left-card p').html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
         }
       });
     },
@@ -137,13 +131,12 @@ $('#list-of-beers').on('change', function(e) {
     }
   });
   $('#modal-listbox').modal('close');
-}); // end of function to generate the selected beer
+}); // end of function to display the chosen beer
 
 
-// GENERATE A NEW FEATURED BEER WHEN THE REPLAY BUTTON IS CLICKED
+// FUNCTION TO RANDOMLY GENERATE A NEW FEATURED BEER
 $('#featured-beer').on('click', function(e) {
   let randomIndex = Math.floor(Math.random() * (beerIdArray.length-1));
-  let crossorigin = 'https://crossorigin.me/';
   let proxy = 'https://galvanize-cors-proxy.herokuapp.com/';
   let beerApi = 'https://api.brewerydb.com/v2/beers/';
   let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
@@ -151,12 +144,12 @@ $('#featured-beer').on('click', function(e) {
   let beerId = `\&beerId\=${beerIdArray[randomIndex]}`;
   let beerIdQuery = `${proxy}${beerApi}${apiKey}${beerId}${params}`;
 
-  // update the placeholder image
+  // UPDATE THE PLACEHOLDER IMAGE
   $.ajax ({
     method: 'GET',
     url: beerIdQuery,
     beforeSend: function(xhr) {
-      xhr.setRequestHeader( 'Access-Control-Allow-Headers', '*' );
+      xhr.setRequestHeader('Access-Control-Allow-Headers', '*' );
     },
     success: function(results) {
       var thisName = results.data.name;
@@ -166,57 +159,57 @@ $('#featured-beer').on('click', function(e) {
       var thisDescription = results.data.description;
       var backupDescription = results.data.style.description;
 
-      // update the placeholder paragraph
+      // UPDATER THE PLACEHOLDER PARAGRAPH
       if (thisAbv) {
         if (thisIbu) {
           // all 4 things get displayed
-          $("#featured-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>` + `<p>IBU: ${thisIbu}</p>`);
+          $('#featured-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>` + `<p>IBU: ${thisIbu}</p>`);
         }
         else {
           // beer name, brewery & Abv get displayed
-          $("#featured-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>`);
+          $('#featured-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>`);
         };
       }
       else {
         if (thisIbu) {
           // beer name, brewery and Ibu get displayed
-          $("#featured-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>IBU: ${thisIbu}</p>`);
+          $('#featured-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>IBU: ${thisIbu}</p>`);
         }
         else {
           // only beer name and brewery get displayed
-          $("#featured-beer-data").html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>`);
+          $('#featured-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>`);
         };
       };
 
       // update the image label
-      $("#featured-beer-name").remove();
+      $('#featured-beer-name').remove();
 
       // update the image
       if (results.data.labels) {
-        $("#featured-beer-image").attr("src", results.data.labels.medium);
-        $('#right-image').addClass("hoverable");
+        $('#featured-beer-image').attr('src', results.data.labels.medium);
+        $('#right-image').addClass('hoverable');
 
       }
       else {
-        $("#featured-beer-image").attr("src", 'images/pint-glass-with-boca-cropped-525x350.png');
-        $('#right-image').addClass("hoverable");
+        $('#featured-beer-image').attr('src', 'images/pint-glass-with-boca-cropped-525x350.png');
+        $('#right-image').addClass('hoverable');
       }
 
-      // update the information that will show upon card-reveal
+      // UPDATE THE INFORMATION THAT WILL DISPLAY UPON CARD-REVEAL
       $('.activator').on('click', function(e) {
         if (thisDescription) {
-          $("#right-card p").html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
+          $('#right-card p').html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
         }
         else {
-          $("#right-card p").html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
+          $('#right-card p').html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
         }
       });
     },
     error: function (error) {
     }
   });
-}); // end of function to generate a new featured beer
+}); // end of function to randomly generate a new featured beer
 
-$("#modal1").on('click', function(e) {
+$('#modal1').on('click', function(e) {
   $('#modal1').modal('close');
 });
