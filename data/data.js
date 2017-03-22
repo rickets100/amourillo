@@ -184,19 +184,6 @@ breweryCountry: 'USA',
 otherHops: ['Cascade']
 },
 {
-brewer: 'Fremont',
-beerName: 'Summer Ale',
-beerId: 'f9z6Ra',
-beerType: 'Golden Ale',
-beerAbv: '5.2',
-beerIbu: '',
-beerDescription: 'Golden Ale brewed with 100 Amarillo hops. Floral aromas of citrus and orange.',
-breweryCity: 'Seattle',
-breweryState: 'WA',
-breweryCountry: 'USA',
-otherHops: ['None']
-},
-{
 brewer: 'Terrapin',
 beerName: 'Rye Pale Ale',
 beerId: 'QXkarn',
@@ -475,13 +462,14 @@ otherHops: []
 brewer: 'Fremont Brewing Company',
 beerName: 'Summer Ale',
 beerId: 'f9z6Ra',
-beerType: 'Ale',
+beerType: 'Golden Ale',
 beerAbv: '5.2',
 beerIbu: '',
-beerDescription: '',
+beerDescription: 'Golden Ale brewed with 100 Amarillo hops. Floral aromas of citrus and orange.',
+breweryCity: 'Seattle',
 breweryState: 'WA',
 breweryCountry: '',
-otherHops: []
+otherHops: ['None']
 },
 {
 brewer: 'Wild Beer Co.',

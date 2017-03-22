@@ -16,30 +16,34 @@ $(document).ready(function() {
 var objectForGets = {};
 var beerIdArray = [];
 
-// ++GENERATE NAMES FOR THE LISTBOX/SELECTBOX
-function createListBoxItems (object) {
-  let listBoxArray = [];
+// ++SORT THE DATASET, THEN GENERATE NAMES FOR THE LISTBOX/SELECTBOX
+function createListBoxItems (beerInfo) {
+  let sortedBeers = beerInfo.sort(function compare(beer1,beer2) {
+  let beer1Name = beer1.beerName + ' - ' + beer1.brewer;
+  let beer2Name = beer2.beerName + ' - ' + beer2.brewer;
 
-  $.each(beerInfo, function(key, value) {
-    let beer = beerInfo[key].beerName;
-    let brewer = beerInfo[key].brewer;
-    let id = beerInfo[key].beerId;
-    let nameAsDisplayed = beer + ' - ' + brewer;
-    let listBoxHtml = '<option value="' + beer + '" id=' + id + '>' + nameAsDisplayed + '</option>';
-    listBoxArray.push(listBoxHtml);
+  if (beer1Name < beer2Name)
+    return -1;
+  if (beer1Name > beer2Name)
+    return 1;
+  return 0;
   });
 
+  $.each(sortedBeers, function(key, value) {
+    let beer = sortedBeers[key].beerName;
+    let brewer = sortedBeers[key].brewer;
+    let id = sortedBeers[key].beerId;
+    let nameAsDisplayed = beer + ' - ' + brewer;
+    let listBoxHtml = '<option value="' + beer + '" id=' + id + '>' + nameAsDisplayed + '</option>';
 
-  listBoxArray.sort();
-  $.each(listBoxArray, function(key, value) {
-    $('#list-of-beers').append(listBoxArray[key]);
+    $('#list-of-beers').append(listBoxHtml);
   });
 };
 
 // ++PULL THE ID FOR THE SELECTED ITEM
 function getIdFromListBox() {
   var selectedBeerId = $(this).children(':selected').attr('id');
-  console.log(selectedBeerId);
+  // console.log(selectedBeerId);
 }
 
 // PULL DATA FROM THE LOCAL DATA FILE
