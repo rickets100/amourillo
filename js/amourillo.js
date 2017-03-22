@@ -7,9 +7,6 @@ https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/beers\?ke
 'https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=amarillo%20Pale%20Ale'
 */
 
-// GLOBAL VARIABLES
-var objectForGets = {};
-
 // SORT THE DATASET
 function createListBoxItems (beerInfo) {
   let sortedBeers = beerInfo.sort(function compare(beer1,beer2) {
@@ -35,17 +32,6 @@ function createListBoxItems (beerInfo) {
   });
 };
 
-// PULL DATA FROM THE LOCAL DATA FILE
-// Note: beerInfo is the array of objects stored in data.js. My plan is to be able to replace it with data pulled from a database when we reach that part of the course - as a way to help myself practice
-function createObjectForGets() {
-
-  // CREATE THE ARRAY FOR THE AJAX QUERY BY ID
-  for (let i = 0; i <beerInfo.length; i++) {
-    objectForGets.beerId = beerInfo[i].beerId;
-  };
-};
-
-createObjectForGets();
 createListBoxItems(beerInfo);
 
 // FUNCTION TO DISPLAY THE CHOSEN BEER'S INFO WHEN CHOSEN IN THE SELECT BOX
