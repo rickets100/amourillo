@@ -7,11 +7,6 @@ https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/beers\?ke
 'https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=amarillo%20Pale%20Ale'
 */
 
-$(document).ready(function() {
-  $('select').material_select();
-  $('.modal').modal();
-});
-
 // GLOBAL VARIABLES
 var objectForGets = {};
 
@@ -78,12 +73,13 @@ $('#list-of-beers').on('change', function(e) {
       xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
     },
     success: function(results) {
-      var thisName = results.data.name;
-      var thisBrewer = results.data.breweries[0].name;
-      var thisAbv = results.data.abv;
-      var thisIbu = results.data.ibu;
-      var thisDescription = results.data.description;
-      var backupDescription = results.data.style.description;
+      var obj = results.data;
+      var thisName = obj.name;
+      var thisBrewer = obj.breweries[0].name;
+      var thisAbv = obj.abv;
+      var thisIbu = obj.ibu;
+      var thisDescription = obj.description;
+      var backupDescription = obj.style.description;
 
       // UPDATE THE PLACEHOLDER PARAGRAPH
       if (thisAbv) {
@@ -111,8 +107,8 @@ $('#list-of-beers').on('change', function(e) {
       $('#selected-beer-name').remove();
 
       // UPDATE THE IMAGE
-      if (results.data.labels) {
-        $('#selected-beer-image').attr('src', results.data.labels.medium);
+      if (obj.labels) {
+        $('#selected-beer-image').attr('src', obj.labels.medium);
         $('#left-image').addClass('hoverable');
       }
       else {
@@ -156,12 +152,13 @@ $('#featured-beer').on('click', function(e) {
       xhr.setRequestHeader('Access-Control-Allow-Headers', '*' );
     },
     success: function(results) {
-      var thisName = results.data.name;
-      var thisBrewer = results.data.breweries[0].name;
-      var thisAbv = results.data.abv;
-      var thisIbu = results.data.ibu;
-      var thisDescription = results.data.description;
-      var backupDescription = results.data.style.description;
+      var obj = results.data;
+      var thisName = obj.name;
+      var thisBrewer = obj.breweries[0].name;
+      var thisAbv = obj.abv;
+      var thisIbu = obj.ibu;
+      var thisDescription = obj.description;
+      var backupDescription = obj.style.description;
 
       // UPDATER THE PLACEHOLDER PARAGRAPH
       if (thisAbv) {
@@ -189,8 +186,8 @@ $('#featured-beer').on('click', function(e) {
       $('#featured-beer-name').remove();
 
       // update the image
-      if (results.data.labels) {
-        $('#featured-beer-image').attr('src', results.data.labels.medium);
+      if (obj.labels) {
+        $('#featured-beer-image').attr('src', obj.labels.medium);
         $('#right-image').addClass('hoverable');
 
       }
@@ -213,6 +210,9 @@ $('#featured-beer').on('click', function(e) {
     }
   });
 }); // end of function to randomly generate a new featured beer
+
+$('select').material_select();
+$('.modal').modal();   // $('.modal, .othermodal').modal();
 
 $('#modal1').on('click', function(e) {
   $('#modal1').modal('close');
