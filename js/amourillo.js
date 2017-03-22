@@ -14,9 +14,8 @@ $(document).ready(function() {
 
 // GLOBAL VARIABLES
 var objectForGets = {};
-var beerIdArray = [];
 
-// ++SORT THE DATASET, THEN GENERATE NAMES FOR THE LISTBOX/SELECTBOX
+// SORT THE DATASET
 function createListBoxItems (beerInfo) {
   let sortedBeers = beerInfo.sort(function compare(beer1,beer2) {
   let beer1Name = beer1.beerName + ' - ' + beer1.brewer;
@@ -29,6 +28,7 @@ function createListBoxItems (beerInfo) {
   return 0;
   });
 
+  // GENERATE NAMES FOR THE LISTBOX/SELECTBOX
   $.each(sortedBeers, function(key, value) {
     let beer = sortedBeers[key].beerName;
     let brewer = sortedBeers[key].brewer;
@@ -44,7 +44,7 @@ function createListBoxItems (beerInfo) {
 function getIdFromListBox() {
   var selectedBeerId = $(this).children(':selected').attr('id');
   // console.log(selectedBeerId);
-}
+};
 
 // PULL DATA FROM THE LOCAL DATA FILE
 // Note: beerInfo is the array of objects stored in data.js. My plan is to be able to replace it with data pulled from a database when we reach that part of the course - as a way to help myself practice
@@ -53,7 +53,6 @@ function createObjectForGets() {
   // CREATE THE ARRAY FOR THE AJAX QUERY BY ID
   for (let i = 0; i <beerInfo.length; i++) {
     objectForGets.beerId = beerInfo[i].beerId;
-    beerIdArray[i] = beerInfo[i].beerId;
   };
 };
 
@@ -140,12 +139,13 @@ $('#list-of-beers').on('change', function(e) {
 
 // FUNCTION TO RANDOMLY GENERATE A NEW FEATURED BEER
 $('#featured-beer').on('click', function(e) {
-  let randomIndex = Math.floor(Math.random() * (beerIdArray.length-1));
   let proxy = 'https://galvanize-cors-proxy.herokuapp.com/';
   let beerApi = 'https://api.brewerydb.com/v2/beers/';
   let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
   let params = '\&withBreweries=Y';
-  let beerId = `\&beerId\=${beerIdArray[randomIndex]}`;
+  let randomIndex = Math.floor(Math.random() * (beerInfo.length-1));
+  let randomBeerId = beerInfo[randomIndex].beerId;
+  let beerId = `\&beerId\=${randomBeerId}`;
   let beerIdQuery = `${proxy}${beerApi}${apiKey}${beerId}${params}`;
 
   // UPDATE THE PLACEHOLDER IMAGE
