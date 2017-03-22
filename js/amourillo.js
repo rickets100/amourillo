@@ -35,12 +35,6 @@ function createListBoxItems (beerInfo) {
   });
 };
 
-// ++PULL THE ID FOR THE SELECTED ITEM
-function getIdFromListBox() {
-  var selectedBeerId = $(this).children(':selected').attr('id');
-  // console.log(selectedBeerId);
-};
-
 // PULL DATA FROM THE LOCAL DATA FILE
 // Note: beerInfo is the array of objects stored in data.js. My plan is to be able to replace it with data pulled from a database when we reach that part of the course - as a way to help myself practice
 function createObjectForGets() {
