@@ -1,11 +1,4 @@
-/* API Key: ' 432671cad45a2c4cd0b97ddf1fe4adb0
-http://api.brewerydb.com/v2/?apikey=432671cad45a2c4cd0b97ddf1fe4adb0/brewery/KR4X6i
-
-EXAMPLES OF SYNTAX:
-https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=juniper%20Pale%20Ale
-
-'https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=amarillo%20Pale%20Ale'
-*/
+// KAY KREWSON GALVANIZE SEATTLE G48 Q1 PROJECT
 
 // FUNCTION TO SORT THE DATASET
 function createListBoxItems (beerInfo) {
@@ -56,7 +49,7 @@ function updateCardText(beer, brewer, abv, ibu, card) {
     }
     else {
       // beer name, brewery & Abv get displayed
-      $(card).html(basicInfo + `<p>ABV: ${abv}</p>`);
+      $(card).html(basicInfo + `<p>ABV: ${abv}%</p>`);
     };
   }
   else {
@@ -120,13 +113,14 @@ $('#list-of-beers').on('change', function(e) {
       var backupDescription = obj.style.description;
       var label = obj.labels;
 
+      // UPDATE THE CARD TEXT (MAIN PARAGRAPH)
       updateCardText(thisName, thisBrewer, thisAbv, thisIbu, thisCard);
 
       // UPDATE THE IMAGE LABEL
       $('#selected-beer-name').remove();
       updateCardImage(label,'#selected-beer-image','#left-image');
 
-      // UPDATE THE INFORMATION THAT WILL SHOW UPON CARD REVEAL
+      // DO THE CARD REVEAL
       cardReveal('#left-card p', thisName, thisDescription, backupDescription);
     },
     error: function (error) {
@@ -174,7 +168,7 @@ $('#featured-beer').on('click', function(e) {
     error: function (error) {
     }
   });
-}); 
+});
 
 $('select').material_select();
 $('.modal').modal();   // $('.modal, .othermodal').modal();
