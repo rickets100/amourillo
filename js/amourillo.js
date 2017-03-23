@@ -34,18 +34,26 @@ function createListBoxItems (beerInfo) {
 
 createListBoxItems(beerInfo);
 
-// FUNCTION TO DISPLAY THE CHOSEN BEER'S INFO WHEN CHOSEN IN THE SELECT BOX
-$('#list-of-beers').on('change', function(e) {
+// FUNCTION TO CREATE THE QUERY STRING
+function makeQuery(param) {
   let proxy = 'https://galvanize-cors-proxy.herokuapp.com/';
   let beerApi = 'https://api.brewerydb.com/v2/beers/';
   let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
-  let selectedBeerId = $(this).children(':selected').attr('id');
-  let beerId = `\&beerId\=${selectedBeerId}`
-  let params = '\&withBreweries=Y';
+  let brewInfo = '\&withBreweries=Y';
 
   // FORMULATE THE QUERY
-  let beerIdQuery = `${proxy}${beerApi}${apiKey}${beerId}${params}`;
+  let thisQuery = `${proxy}${beerApi}${apiKey}${param}${brewInfo}`;
+  console.log('in makeQuery, thisQuery is: ', thisQuery);
+  return thisQuery;
+}
 
+// FUNCTION TO DISPLAY THE CHOSEN BEER'S INFO WHEN CHOSEN IN THE SELECT BOX
+$('#list-of-beers').on('change', function(e) {
+  let selectedBeerId = $(this).children(':selected').attr('id');
+  let beerId = `\&beerId\=${selectedBeerId}`
+  let beerIdQuery = makeQuery(beerId);
+
+  // MAKE THE QUERY
   $.ajax ({
     method: 'GET',
     url: beerIdQuery,
@@ -115,14 +123,10 @@ $('#list-of-beers').on('change', function(e) {
 
 // FUNCTION TO RANDOMLY GENERATE A NEW FEATURED BEER
 $('#featured-beer').on('click', function(e) {
-  let proxy = 'https://galvanize-cors-proxy.herokuapp.com/';
-  let beerApi = 'https://api.brewerydb.com/v2/beers/';
-  let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
-  let params = '\&withBreweries=Y';
   let randomIndex = Math.floor(Math.random() * (beerInfo.length-1));
   let randomBeerId = beerInfo[randomIndex].beerId;
   let beerId = `\&beerId\=${randomBeerId}`;
-  let beerIdQuery = `${proxy}${beerApi}${apiKey}${beerId}${params}`;
+  let beerIdQuery = makeQuery(beerId);
 
   // UPDATE THE PLACEHOLDER IMAGE
   $.ajax ({
