@@ -41,21 +41,23 @@ function makeQuery(param) {
 // FUNCTION TO UPDATE THE CARD TEXT
 function updateCardText(beer, brewer, abv, ibu, card) {
   let basicInfo = `<p><b>${beer}</b></p>` + `<p><i>${brewer}</i></p>`;
+  let abvText = `<p>ABV: ${abv}</p>`;
+  let ibuText = `<p>IBU: ${ibu}</p>`;
 
   if (abv) {
     if (ibu) {
       // all 4 things get displayed
-      $(card).html(basicInfo + `<p>ABV: ${abv}</p>` + `<p>IBU: ${ibu}</p>`);
+      $(card).html(basicInfo + abvText + ibuText);
     }
     else {
       // beer name, brewery & Abv get displayed
-      $(card).html(basicInfo + `<p>ABV: ${abv}%</p>`);
+      $(card).html(basicInfo + abvText);
     };
   }
   else {
     if (ibu) {
       // beer name, brewery and Ibu get displayed
-      $(card).html(basicInfo + `<p>IBU: ${ibu}</p>`);
+      $(card).html(basicInfo + ibuText);
     }
     else {
       // only beer name and brewery get displayed
@@ -83,8 +85,11 @@ function cardReveal(target, name, description, backup) {
     if (description) {
       $(target).html(`<p><b>${name}</b></p>` + `<p>${description}</p>`);
     }
-    else {
+    else if (backup) {
       $(target).html(`<p><b>${name}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backup}</p>`);
+    }
+    else {
+      $(target).html(`<p><b>${name}</b></p>` + `<p>No description is available for this beer.</p>`);
     };
   });
 };
