@@ -72,8 +72,29 @@ function updateCardText(beer, brewer, abv, ibu, card) {
 };
 
 // FUNCTION TO UPDATE THE CARD IMAGE
-function updateCardImage(beer, brewer, card) {
-}
+function updateCardImage(label, imageAtt, imageClass) {
+  let defaultBeerImage = 'images/pint-glass-with-boca-cropped-525x350.png';
+  if (label) {
+    $(imageAtt).attr('src', label.medium);
+    $(imageClass).addClass('hoverable');
+  }
+  else {
+    $(imageAtt).attr('src', defaultBeerImage);
+    $(imageClass).addClass('hoverable');
+  }
+};
+
+// FUNCTION TO DO THE CARD REVEAL
+function cardReveal(target, name, description, backup) {
+  $('.activator').on('click', function(e) {
+    if (description) {
+      $(target).html(`<p><b>${name}</b></p>` + `<p>${description}</p>`);
+    }
+    else {
+      $(target).html(`<p><b>${name}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backup}</p>`);
+    };
+  });
+};
 
 // FUNCTION TO DISPLAY THE SELECT BOX'S CHOSEN-BEER INFO
 $('#list-of-beers').on('change', function(e) {
@@ -97,37 +118,22 @@ $('#list-of-beers').on('change', function(e) {
       var thisIbu = obj.ibu;
       var thisDescription = obj.description;
       var backupDescription = obj.style.description;
+      var label = obj.labels;
 
       updateCardText(thisName, thisBrewer, thisAbv, thisIbu, thisCard);
 
       // UPDATE THE IMAGE LABEL
       $('#selected-beer-name').remove();
-
-      // UPDATE THE IMAGE
-      if (obj.labels) {
-        $('#selected-beer-image').attr('src', obj.labels.medium);
-        $('#left-image').addClass('hoverable');
-      }
-      else {
-        $('#selected-beer-image').attr('src', 'images/pint-glass-with-boca-cropped-525x350.png');
-        $('#left-image').addClass('hoverable');
-      }
+      updateCardImage(label,'#selected-beer-image','#left-image');
 
       // UPDATE THE INFORMATION THAT WILL SHOW UPON CARD REVEAL
-      $('.activator').on('click', function(e) {
-        if (thisDescription) {
-          $('#left-card p').html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
-        }
-        else {
-          $('#left-card p').html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
-        }
-      });
+      cardReveal('#left-card p', thisName, thisDescription, backupDescription);
     },
     error: function (error) {
     }
   });
   $('#modal-listbox').modal('close');
-}); // end of function to display the chosen beer
+});
 
 
 // FUNCTION TO RANDOMLY GENERATE A NEW FEATURED BEER
@@ -153,38 +159,22 @@ $('#featured-beer').on('click', function(e) {
       var thisIbu = obj.ibu;
       var thisDescription = obj.description;
       var backupDescription = obj.style.description;
+      var label = obj.labels;
 
       // UPDATE THE CARD TEXT (MAIN PARAGRAPH)
       updateCardText(thisName, thisBrewer, thisAbv, thisIbu, thisCard);
 
-      // update the image label
+      // UPDATE THE IMAGE LABEL
       $('#featured-beer-name').remove();
+      updateCardImage(label,'#featured-beer-image','#right-image');
 
-      // update the image
-      if (obj.labels) {
-        $('#featured-beer-image').attr('src', obj.labels.medium);
-        $('#right-image').addClass('hoverable');
-
-      }
-      else {
-        $('#featured-beer-image').attr('src', 'images/pint-glass-with-boca-cropped-525x350.png');
-        $('#right-image').addClass('hoverable');
-      }
-
-      // UPDATE THE INFORMATION THAT WILL DISPLAY UPON CARD-REVEAL
-      $('.activator').on('click', function(e) {
-        if (thisDescription) {
-          $('#right-card p').html(`<p><b>${thisName}</b></p>` + `<p>${thisDescription}</p>`);
-        }
-        else {
-          $('#right-card p').html(`<p><b>${thisName}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backupDescription}</p>`);
-        }
-      });
+      // DO THE CARD-REVEAL
+      cardReveal('#right-card p', thisName, thisDescription, backupDescription);
     },
     error: function (error) {
     }
   });
-}); // end of function to randomly generate a new featured beer
+}); 
 
 $('select').material_select();
 $('.modal').modal();   // $('.modal, .othermodal').modal();
