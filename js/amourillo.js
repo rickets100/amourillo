@@ -7,7 +7,7 @@ https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/beers\?ke
 'https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/beers\?key\=432671cad45a2c4cd0b97ddf1fe4adb0\&name\=amarillo%20Pale%20Ale'
 */
 
-// SORT THE DATASET
+// FUNCTION TO SORT THE DATASET
 function createListBoxItems (beerInfo) {
   let sortedBeers = beerInfo.sort(function compare(beer1,beer2) {
   let beer1Name = beer1.beerName + ' - ' + beer1.brewer;
@@ -40,18 +40,47 @@ function makeQuery(param) {
   let beerApi = 'https://api.brewerydb.com/v2/beers/';
   let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
   let brewInfo = '\&withBreweries=Y';
-
-  // FORMULATE THE QUERY
   let thisQuery = `${proxy}${beerApi}${apiKey}${param}${brewInfo}`;
-  console.log('in makeQuery, thisQuery is: ', thisQuery);
+
   return thisQuery;
 }
 
-// FUNCTION TO DISPLAY THE CHOSEN BEER'S INFO WHEN CHOSEN IN THE SELECT BOX
+// FUNCTION TO UPDATE THE CARD TEXT
+function updateCardText(beer, brewer, abv, ibu, card) {
+  let basicInfo = `<p><b>${beer}</b></p>` + `<p><i>${brewer}</i></p>`;
+
+  if (abv) {
+    if (ibu) {
+      // all 4 things get displayed
+      $(card).html(basicInfo + `<p>ABV: ${abv}</p>` + `<p>IBU: ${ibu}</p>`);
+    }
+    else {
+      // beer name, brewery & Abv get displayed
+      $(card).html(basicInfo + `<p>ABV: ${abv}</p>`);
+    };
+  }
+  else {
+    if (ibu) {
+      // beer name, brewery and Ibu get displayed
+      $(card).html(basicInfo + `<p>IBU: ${ibu}</p>`);
+    }
+    else {
+      // only beer name and brewery get displayed
+      $(card).html(basicInfo);
+    };
+  };
+};
+
+// FUNCTION TO UPDATE THE CARD IMAGE
+function updateCardImage(beer, brewer, card) {
+}
+
+// FUNCTION TO DISPLAY THE SELECT BOX'S CHOSEN-BEER INFO
 $('#list-of-beers').on('change', function(e) {
   let selectedBeerId = $(this).children(':selected').attr('id');
   let beerId = `\&beerId\=${selectedBeerId}`
   let beerIdQuery = makeQuery(beerId);
+  let thisCard = '#selected-beer-data';
 
   // MAKE THE QUERY
   $.ajax ({
@@ -69,27 +98,7 @@ $('#list-of-beers').on('change', function(e) {
       var thisDescription = obj.description;
       var backupDescription = obj.style.description;
 
-      // UPDATE THE PLACEHOLDER PARAGRAPH
-      if (thisAbv) {
-        if (thisIbu) {
-          // all 4 things get displayed
-          $('#selected-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>` + `<p>IBU: ${thisIbu}</p>`);
-        }
-        else {
-          // beer name, brewery & Abv get displayed
-          $('#selected-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>`);
-        };
-      }
-      else {
-        if (thisIbu) {
-          // beer name, brewery and Ibu get displayed
-          $('#selected-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>IBU: ${thisIbu}</p>`);
-        }
-        else {
-          // only beer name and brewery get displayed
-          $('#selected-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>`);
-        };
-      };
+      updateCardText(thisName, thisBrewer, thisAbv, thisIbu, thisCard);
 
       // UPDATE THE IMAGE LABEL
       $('#selected-beer-name').remove();
@@ -127,8 +136,9 @@ $('#featured-beer').on('click', function(e) {
   let randomBeerId = beerInfo[randomIndex].beerId;
   let beerId = `\&beerId\=${randomBeerId}`;
   let beerIdQuery = makeQuery(beerId);
+  let thisCard = '#featured-beer-data';
 
-  // UPDATE THE PLACEHOLDER IMAGE
+  // MAKE THE QUERY
   $.ajax ({
     method: 'GET',
     url: beerIdQuery,
@@ -144,27 +154,8 @@ $('#featured-beer').on('click', function(e) {
       var thisDescription = obj.description;
       var backupDescription = obj.style.description;
 
-      // UPDATER THE PLACEHOLDER PARAGRAPH
-      if (thisAbv) {
-        if (thisIbu) {
-          // all 4 things get displayed
-          $('#featured-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>` + `<p>IBU: ${thisIbu}</p>`);
-        }
-        else {
-          // beer name, brewery & Abv get displayed
-          $('#featured-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>ABV: ${thisAbv}</p>`);
-        };
-      }
-      else {
-        if (thisIbu) {
-          // beer name, brewery and Ibu get displayed
-          $('#featured-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>` + `<p>IBU: ${thisIbu}</p>`);
-        }
-        else {
-          // only beer name and brewery get displayed
-          $('#featured-beer-data').html(`<p><b>${thisName}</b></p>` + `<p><i>${thisBrewer}</i></p>`);
-        };
-      };
+      // UPDATE THE CARD TEXT (MAIN PARAGRAPH)
+      updateCardText(thisName, thisBrewer, thisAbv, thisIbu, thisCard);
 
       // update the image label
       $('#featured-beer-name').remove();
@@ -198,6 +189,7 @@ $('#featured-beer').on('click', function(e) {
 $('select').material_select();
 $('.modal').modal();   // $('.modal, .othermodal').modal();
 
+// FUNCTION TO MAKE THE CENTER MODAL GO AWAY IF CLICKED
 $('#modal1').on('click', function(e) {
   $('#modal1').modal('close');
 });
