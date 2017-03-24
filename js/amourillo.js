@@ -3,14 +3,14 @@
 // FUNCTION TO SORT THE DATASET
 function createListBoxItems (beerInfo) {
   let sortedBeers = beerInfo.sort(function compare(beer1,beer2) {
-  let beer1Name = beer1.beerName + ' - ' + beer1.brewer;
-  let beer2Name = beer2.beerName + ' - ' + beer2.brewer;
+    let beer1Name = beer1.beerName + ' - ' + beer1.brewer;
+    let beer2Name = beer2.beerName + ' - ' + beer2.brewer;
 
-  if (beer1Name < beer2Name)
-    return -1;
-  if (beer1Name > beer2Name)
-    return 1;
-  return 0;
+    if (beer1Name < beer2Name)
+      return -1;
+    if (beer1Name > beer2Name)
+      return 1;
+    return 0;
   });
 
   // GENERATE NAMES FOR THE LISTBOX/SELECTBOX
@@ -81,15 +81,20 @@ function updateCardImage(label, imageAtt, imageClass) {
 
 // FUNCTION TO DO THE CARD REVEAL
 function cardReveal(target, name, description, backup) {
+  let revealName = `<p><b>${name}</b></p>`;
+  let revealDescription = `<p>${description}</p>`;
+  let sorryBut = `<p>No description is available for this beer, but you can read about the type: ${backup}</p>`;
+  let sorry = `<p>No description is available for this beer.</p>`
+
   $('.activator').on('click', function(e) {
     if (description) {
-      $(target).html(`<p><b>${name}</b></p>` + `<p>${description}</p>`);
+      $(target).html(revealName + revealDescription);
     }
     else if (backup) {
-      $(target).html(`<p><b>${name}</b></p>` + `<p>No description is available for this beer, but you can read about the type: ${backup}</p>`);
+      $(target).html(revealName + sorryBut);
     }
     else {
-      $(target).html(`<p><b>${name}</b></p>` + `<p>No description is available for this beer.</p>`);
+      $(target).html(revealName + sorry);
     };
   });
 };
@@ -100,7 +105,7 @@ $('#list-of-beers').on('change', function(e) {
   let beerId = `\&beerId\=${selectedBeerId}`
   let beerIdQuery = makeQuery(beerId);
   let thisCard = '#selected-beer-data';
-
+  console.log(beerIdQuery);
   // MAKE THE QUERY
   $.ajax ({
     method: 'GET',
@@ -143,7 +148,7 @@ $('#featured-beer').on('click', function(e) {
   let beerIdQuery = makeQuery(beerId);
   let thisCard = '#featured-beer-data';
 
-  // MAKE THE QUERY
+  // DO THE QUERY
   $.ajax ({
     method: 'GET',
     url: beerIdQuery,
@@ -176,7 +181,7 @@ $('#featured-beer').on('click', function(e) {
 });
 
 $('select').material_select();
-$('.modal').modal();   // $('.modal, .othermodal').modal();
+$('.modal').modal();
 
 // FUNCTION TO MAKE THE CENTER MODAL GO AWAY IF CLICKED
 $('#modal1').on('click', function(e) {
