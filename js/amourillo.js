@@ -31,7 +31,7 @@ createListBoxItems(beerInfo);
 function makeQuery(param) {
   let proxy = 'https://galvanize-cors-proxy.herokuapp.com/';
   let beerApi = 'https://api.brewerydb.com/v2/beers/';
-  let apiKey = '\?key\=432671cad45a2c4cd0b97ddf1fe4adb0';
+  let apiKey = ;
   let brewInfo = '\&withBreweries=Y';
   let thisQuery = `${proxy}${beerApi}${apiKey}${param}${brewInfo}`;
 
