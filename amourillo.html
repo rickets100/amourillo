@@ -1,48 +1,171 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<!-- {
+brewer: 'Hopworks',
+beerName: 'Ace of Spades',
+beerId: '',
+beerType: '',
+beerAbv: '',
+beerIbu: '',
+beerDescription: '',
+breweryCity: 'Portland',
+breweryState: 'OR',
+breweryCountry: 'USA',
+otherHops: ['Cascade', 'Centennial']
+},
+{
+brewer: 'Hales Ales Brewery and Pub',
+beerName: 'Superjuice',
+beerId: '',
+beerType: '',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Centennial', 'Simcoe']
+},
+{
+brewer: 'Pyramid Breweries',
+beerName: 'Pale Ale',
+beerId: '',
+beerType: '',
+beerAbv: '5.7',
+beerIbu: '45',
+breweryCity: 'Seattle',
+breweryState: 'WA',
+breweryCountry: 'USA',
+beerDescription: '',
+otherHops: ['Cascade', 'CTZ']
+},
+{
+brewer: 'No-Li Brewhouse',
+beerName: 'Amar-Uh-Oh!',
+beerId: '',
+beerType: '',
+beerAbv: '5.5',
+beerIbu: '10',
+beerDescription: '',
+breweryCity: 'Spokane',
+breweryState: 'WA',
+breweryCountry: 'USA',
+otherHops: []
+},
+{
+brewer: 'No-Li Brewhouse',
+beerName: 'Tandem Imperial Spin Cycle Red',
+beerId: '',
+beerType: '',
+beerAbv: '9.5',
+beerIbu: '50',
+beerDescription: '',
+breweryCity: 'Spokane',
+breweryState: 'WA',
+breweryCountry: 'USA',
+otherHops: ['El Dorado']
+},
+{
+brewer: 'Stone Brewing Co.',
+beerName: 'American Stout',
+beerId: '';
+beerType: 'stout',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Columbus, Chinook, Cascade']
+},
+{
+brewer: 'Naked City',
+beerName: 'Hoptrocity',
+beerId:,
+beerType: 'IPA',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['']
+},
+{
+brewer: 'Stone Brewing Co.',
+beerName: '16th Anniversary IPA',
+beerId: 'FCj67Q',
+beerType: 'IPA',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops: ['Calypso']
+},
+{
+brewer: 'Block 15',
+beerName: 'Pint Master\’s Pale Ale',
+beerType: 'American Pale Ale',
+beerAbv: '5.5',
+beerIbu: '34',
+breweryCity: 'Corvallis',
+breweryState: 'OR',
+breweryCountry: 'USA',
+beerDescription: 'American Pale Ale brewed with 100 Amarillo hops.',
+otherHops: ['None']
+},
+{
+brewer: 'La Conner Brewing',
+beerName: '"The Local" Pale Ale',
+beerId: '',
+beerType: '',
+beerAbv: '5.0',
+beerIbu: '33',
+beerDescription: '',
+breweryCity: 'LaConner',
+breweryState: 'WA',
+breweryCountry: 'USA',
+otherHops: ['None']
+},
+{
+brewer: 'La Conner Brewing',
+beerName: 'Citra Wet Hop',
+beerId: '',
+beerType: '',
+beerAbv: '6.3',
+beerIbu: '65',
+beerDescription: '',
+breweryCity: 'LaConner',
+breweryState: 'WA',
+breweryCountry: 'USA',
+otherHops: ['Citra', 'Simcoe']
+},
+{
+brewer: 'Pyramid Breweries',
+beerName: 'Ditto Session IPA',
+beerType: '',
+beerAbv: '4.5',
+beerIbu: '45',
+breweryCity: 'Seattle',
+breweryState: 'WA',
+breweryCountry: 'USA',
+beerDescription: '',
+otherHops: ['Calypso', 'Chinook', 'Delta', 'Nugget']
+}
 
-    <!-- SCRIPTS -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script defer src="./data/data.js"></script>
-    <script defer src="./scripts/amourillo.js" charset="utf-8"></script>
-    <title>Amourillo</title>
+BLANK OBJECT FOR COPYING/PASTING
+{
+brewer: '',
+beerName: '',
+beerType: '',
+beerAbv: '',
+beerIbu: '',
+breweryCity: '',
+breweryState: '',
+breweryCountry: '',
+beerDescription: '',
+otherHops:
+} -->
 
-    <!-- STYLES -->
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="./styles/amourillo.css"> -->
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet"><!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
-
-  <!-- HEADER -->
-  <header>
-  </header>
-
-  <body>
-    </main>
-    <div class="row">
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/sample-1.jpg">
-          <span class="card-title">Card Title</span>
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-        </div>
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <a href="http://s3.amazonaws.com/brewerydb/Powered-By-BreweryDB.png">This application powered by breweryDB</a>
-      <!-- need to have a link to the privacy policy here -->
-  </footer>
-  </body>
-</html>
+<!-- http://brewpublic.com/uncategorized/50-must-try-hoppy-beers/ -->
